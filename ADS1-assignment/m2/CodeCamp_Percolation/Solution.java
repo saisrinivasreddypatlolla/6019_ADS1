@@ -20,7 +20,7 @@ class Percolation {
 	 * number of connections
 	 */
 	private int count = 0;
-	/**
+	/**.
 	 * WeightedQuickUnionUF object
 	 */
 	private WeightedQuickUnionUF ufObject;
@@ -46,16 +46,20 @@ class Percolation {
 			matrix[(row * size) + col] = true;
 			count++;
 			if (row - 1 >= 0 && isOpen(row - 1, col)) {
-				ufObject.union(indexOf(row, col), indexOf(row - 1, col));
+				ufObject.union(indexOf(row, col), indexOf(
+				                   row - 1, col));
 			}
 			if (row + 1 < (size) && isOpen(row + 1, col)) {
-				ufObject.union(indexOf(row, col), indexOf(row + 1, col));
+				ufObject.union(indexOf(row, col), indexOf(
+				                   row + 1, col));
 			}
 			if (col - 1 >= 0 && isOpen(row, col - 1)) {
-				ufObject.union(indexOf(row, col), indexOf(row, col - 1));
+				ufObject.union(indexOf(row, col), indexOf(
+				                   row, col - 1));
 			}
 			if (col + 1 < (size) && isOpen(row, col + 1)) {
-				ufObject.union(indexOf(row, col), indexOf(row, col + 1));
+				ufObject.union(indexOf(row, col), indexOf(
+				                   row, col + 1));
 			}
 			if (row == 0) {
 				ufObject.union(indexOf(row, col), gridSize);
@@ -85,7 +89,8 @@ class Percolation {
 	 * @return     True if open, False otherwise.
 	 */
 	public boolean isOpen(final int row, final int col) {
-		if (matrix[(row * size) + col] == false) {
+		int index = (row * size) + col;
+		if (matrix[index] == false) {
 			return false;
 		}
 		return true;
