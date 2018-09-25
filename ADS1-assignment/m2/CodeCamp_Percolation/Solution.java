@@ -90,10 +90,10 @@ class Percolation {
 	 */
 	public boolean isOpen(final int row, final int col) {
 		int index = (row * size) + col;
-		if (matrix[index] == false) {
-			return false;
+		if (matrix[index]) {
+			return true;
 		}
-		return true;
+		return false;
 	}
 	// public boolean isFull(int row, int col)
 	// is site (row, col) full?
