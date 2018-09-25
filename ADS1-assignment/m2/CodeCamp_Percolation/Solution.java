@@ -5,7 +5,7 @@ class Percolation {
 	int size, gridSize, count = 0;
 	WeightedQuickUnionUF uf;
 	public Percolation(int n) {
-		matrix = new boolean[(n * n) + 2];
+		matrix = new boolean[(n * n)];
 		size = n;
 		gridSize = n * n;
 		uf = new WeightedQuickUnionUF(size * size + 2);
@@ -28,11 +28,12 @@ class Percolation {
 				uf.union(indexOf(row, col), indexOf(row, col + 1));
 			}
 			if (row == 0) {
-				uf.union(row, gridSize);
+				uf.union(indexOf(row,col), gridSize);
 			}
 			if (row == size-1) {
-				uf.union(row, gridSize + 1);
+				uf.union(indexOf(row,col), gridSize + 1);
 			}
+			// System.out.println(Arrays.toString(matrix));
 		}
 	}
 	private int indexOf(int row, int col) {

@@ -110,6 +110,9 @@ public class WeightedQuickUnionUF {
     public int count() {
         return count;
     }
+    public int[] getArray(){
+        return parent;
+    }
   
     /**
      * Returns the component identifier for the component containing site {@code p}.
