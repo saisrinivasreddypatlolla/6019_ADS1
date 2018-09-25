@@ -4,19 +4,36 @@ import java.util.Scanner;
  * or not.
  */
 class Percolation {
-	boolean[] matrix;
-	int size, gridSize, count = 0;
-	WeightedQuickUnionUF uf;
+	/**.
+	 * boolean matrix to store connections
+	 */
+	private boolean[] matrix;
+	/**.
+	 * size of the give grid.
+	 */
+	private int size;
+	/**.
+	 * size of the union id grid.
+	 */
+	private int gridSize;
+	/**.
+	 * number of connections
+	 */
+	private int count = 0;
+	/**
+	 * WeightedQuickUnionUF object
+	 */
+	private WeightedQuickUnionUF ufObject;
 	/**.
 	 * Constructs the object and assigns all values.
 	 *
 	 * @param      size1     size of the grid.
 	 */
-	public Percolation(final int size1) {
+	Percolation(final int size1) {
 		matrix = new boolean[(size1 * size1)];
 		size = size1;
 		gridSize = size1 * size1;
-		uf = new WeightedQuickUnionUF(size * size + 2);
+		ufObject = new WeightedQuickUnionUF(size * size + 2);
 	}
 	/**.
 	 * this method connects the two nodes using given rows and columns
@@ -29,22 +46,22 @@ class Percolation {
 			matrix[(row * size) + col] = true;
 			count++;
 			if (row - 1 >= 0 && isOpen(row - 1, col)) {
-				uf.union(indexOf(row, col), indexOf(row - 1, col));
+				ufObject.union(indexOf(row, col), indexOf(row - 1, col));
 			}
 			if (row + 1 < (size) && isOpen(row + 1, col)) {
-				uf.union(indexOf(row, col), indexOf(row + 1, col));
+				ufObject.union(indexOf(row, col), indexOf(row + 1, col));
 			}
 			if (col - 1 >= 0 && isOpen(row, col - 1)) {
-				uf.union(indexOf(row, col), indexOf(row, col - 1));
+				ufObject.union(indexOf(row, col), indexOf(row, col - 1));
 			}
 			if (col + 1 < (size) && isOpen(row, col + 1)) {
-				uf.union(indexOf(row, col), indexOf(row, col + 1));
+				ufObject.union(indexOf(row, col), indexOf(row, col + 1));
 			}
 			if (row == 0) {
-				uf.union(indexOf(row, col), gridSize);
+				ufObject.union(indexOf(row, col), gridSize);
 			}
 			if (row == size - 1) {
-				uf.union(indexOf(row, col), gridSize + 1);
+				ufObject.union(indexOf(row, col), gridSize + 1);
 			}
 		}
 	}
@@ -90,7 +107,7 @@ class Percolation {
 	 * @return     returns boolean value.
 	 */
 	public boolean percolates() {
-		return uf.connected(gridSize, gridSize + 1);
+		return ufObject.connected(gridSize, gridSize + 1);
 	}
 }
 /**.
@@ -100,7 +117,7 @@ public final class Solution {
 	/**.
 	 * Constructs the object.
 	 */
-	private Solution(){
+	private Solution() {
 
 	}
 	/**.
@@ -111,12 +128,14 @@ public final class Solution {
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int size = Integer.parseInt(scan.nextLine());
-		Percolation p = new Percolation(size);
+		Percolation objPercolate = new Percolation(size);
 		while (scan.hasNext()) {
 			String[] items = scan.nextLine().split(" ");
-			p.open(Integer.parseInt(items[0]) - 1, Integer.parseInt(items[1]) - 1);
+			objPercolate.open(Integer.parseInt(
+			                      items[0]) - 1, Integer.parseInt(
+			                      items[1]) - 1);
 		}
-		System.out.println(p.percolates());
+		System.out.println(objPercolate.percolates());
 
 
 	}
