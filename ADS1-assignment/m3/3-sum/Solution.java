@@ -7,21 +7,21 @@ class ThreeSum {
 	/**.
 	 * variables to store input values
 	 */
-	int[] array;
+	private int[] array;
 	/**.
 	 * count of three sum numbers
 	 */
-	int count = 0;
+	private int count = 0;
 	/**.
 	 * size of array
 	 */
-	int size = 0;
+	private int size = 0;
 	/**
 	 * Constructs to assign array size.
 	 *
-	 * @param      size  The size
+	 * @param      sizes  The size
 	 */
-	ThreeSum(final int size) {
+	ThreeSum(final int sizes) {
 		array = new int[size];
 	}
 	/**.
@@ -39,7 +39,7 @@ class ThreeSum {
 	// 			int k = Arrays.binarySearch(
 	// 				array, -(array[i] + array[j]));
 	// 			if (k > j) {
-	// 				// StdOut.println(a[i] + " " + a[j] + " " + a[k]);
+	//StdOut.println(a[i] + " " + a[j] + " " + a[k]);
 	// 				count++;
 	// 			}
 	// 		}
@@ -52,16 +52,16 @@ class ThreeSum {
 	 */
 	public void threeSum(){
 		Arrays.sort(array);
-		int i,j,k;
-		for(i=0;i<size-1;i++){
-			j=i+1;
-			k=size-1;
-			while(k>j){
-				if(array[i]+array[j]+array[k]<0){
+		int i, j, k;
+		for (i = 0; i < size - 1; i++) {
+			j = i + 1;
+			k = size - 1;
+			while (k > j) {
+				if (array[i] + array[j] + array[k] < 0) {
 					j++;
-				}else if(array[i]+array[j]+array[k]>0){
+				} else if (array[i] + array[j] + array[k] > 0) {
 					k--;
-				}else{
+				} else {
 					count++;
 					j++;
 					k--;
@@ -74,13 +74,13 @@ class ThreeSum {
 	// 	int cc = 0;
 	// 	for (int i = 0; i < array.length; i++) {
 	// 		for (int j = i + 1; j < array.length; j++) {
-	// 			// int k = Arrays.binarySearch(array, -(array[i]+array[j]));
+	// // int k = Arrays.binarySearch(array, -(array[i]+array[j]));
 	// 			for (int k = j + 1; k < array.length; k++) {
 	// 				if (array[i]+array[j]+array[k]==0) {
 	// 					count++;
-	// 					System.out.println("***"+array[i]+", "+array[j]+", "+array[k]);
+	// System.out.println("***"+array[i]+", "+array[j]+", "+array[k]);
 	// 				}
-	// 				System.out.println(array[i]+", "+array[j]+", "+array[k]);
+	// System.out.println(array[i]+", "+array[j]+", "+array[k]);
 	// 				cc++;
 	// 			}
 
@@ -89,34 +89,15 @@ class ThreeSum {
 	// 	System.out.println(count);
 	// 	System.out.println("cc = "+cc);
 	// }
-	// public void threeSum() {
-	// 	int cc = 0;
-	// 	int temp1, temp2, k = 0;
-
-	// 	for (int i = 0; i < array.length - 1; i++) {
-	// 		temp1 = array[k];
-	// 		temp2 = array[i + 1];
-	// 		for (int j = i + 2; j < array.length; j++) {
-	// 			if (temp1 + temp2 + array[j] == 0) {
-	// 				count++;
-	// 			}
-	// 			System.out.println(array[i] + ", " + array[j] + ", " + array[k]);
-	// 			cc++;
-
-	// 		}
-	// 	}
-	// 	System.out.println(count);
-	// 	System.out.println("cc = " + cc);
-	// }
 }
 /**.
  * Class for solution.
  */
-class Solution {
+final class Solution {
 	/**.
 	 * Constructs the object.
 	 */
-	private Solution(){
+	private Solution() {
 
 	}
 	/**.
