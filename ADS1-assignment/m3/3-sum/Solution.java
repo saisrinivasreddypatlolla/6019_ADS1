@@ -19,10 +19,10 @@ class ThreeSum {
 	/**
 	 * Constructs to assign array size.
 	 *
-	 * @param      sizes  The size
+	 * @param      sizes  The sizes
 	 */
 	ThreeSum(final int sizes) {
-		array = new int[size];
+		array = new int[sizes];
 	}
 	/**.
 	 * thismethod adds the values to the array.
@@ -39,7 +39,7 @@ class ThreeSum {
 	// 			int k = Arrays.binarySearch(
 	// 				array, -(array[i] + array[j]));
 	// 			if (k > j) {
-	//StdOut.println(a[i] + " " + a[j] + " " + a[k]);
+	// 				// StdOut.println(a[i] + " " + a[j] + " " + a[k]);
 	// 				count++;
 	// 			}
 	// 		}
@@ -50,7 +50,7 @@ class ThreeSum {
 	 * this method is used to find the count
 	 * of three sum.
 	 */
-	public void threeSum() {
+	public void threeSum(){
 		Arrays.sort(array);
 		int i, j, k;
 		for (i = 0; i < size - 1; i++) {
@@ -74,13 +74,13 @@ class ThreeSum {
 	// 	int cc = 0;
 	// 	for (int i = 0; i < array.length; i++) {
 	// 		for (int j = i + 1; j < array.length; j++) {
-	// // int k = Arrays.binarySearch(array, -(array[i]+array[j]));
+	// 			// int k = Arrays.binarySearch(array, -(array[i]+array[j]));
 	// 			for (int k = j + 1; k < array.length; k++) {
 	// 				if (array[i]+array[j]+array[k]==0) {
 	// 					count++;
-	// System.out.println("***"+array[i]+", "+array[j]+", "+array[k]);
+	// 					System.out.println("***"+array[i]+", "+array[j]+", "+array[k]);
 	// 				}
-	// System.out.println(array[i]+", "+array[j]+", "+array[k]);
+	// 				System.out.println(array[i]+", "+array[j]+", "+array[k]);
 	// 				cc++;
 	// 			}
 
@@ -100,7 +100,7 @@ class ThreeSum {
 	// 			if (temp1 + temp2 + array[j] == 0) {
 	// 				count++;
 	// 			}
-	// System.out.println(array[i] + ", " + array[j] + ", " + array[k]);
+	// 			System.out.println(array[i] + ", " + array[j] + ", " + array[k]);
 	// 			cc++;
 
 	// 		}
