@@ -1,26 +1,74 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+/**.
+ * Class for three sum.
+ */
 class ThreeSum {
+	/**.
+	 * variables to store input values
+	 */
 	int[] array;
-	int size = 0;
+	/**.
+	 * count of three sum numbers
+	 */
 	int count = 0;
-	ThreeSum(int size) {
+	/**.
+	 * size of array
+	 */
+	int size = 0;
+	/**
+	 * Constructs to assign array size.
+	 *
+	 * @param      size  The size
+	 */
+	ThreeSum(final int size) {
 		array = new int[size];
 	}
-	public void add(int element) {
+	/**.
+	 * thismethod adds the values to the array.
+	 *
+	 * @param      element  The element
+	 */
+	public void add(final int element) {
 		array[size++] = element;
 	}
+	// public void threeSum() {
+	// 	Arrays.sort(array);
+	// 	for (int i = 0; i < size - 1; i++) {
+	// 		for (int j = i + 1; j < size - 1; j++) {
+	// 			int k = Arrays.binarySearch(
+	// 				array, -(array[i] + array[j]));
+	// 			if (k > j) {
+	// 				// StdOut.println(a[i] + " " + a[j] + " " + a[k]);
+	// 				count++;
+	// 			}
+	// 		}
+	// 	}
+	// 	System.out.println(count);
+	// }
+	/**.
+	 * this method is used to find the count
+	 * of three sum.
+	 */
 	public void threeSum(){
 		Arrays.sort(array);
-		for (int i = 0; i < array.length; i++) {
-            for (int j = i+1; j < array.length; j++) {
-                int k = Arrays.binarySearch(array, -(array[i] + array[j]));
-                if (k > j){
-                 // StdOut.println(a[i] + " " + a[j] + " " + a[k]);
-                	count++;
-                }
-            }
-        }
-        System.out.println(count);
+		int i,j,k;
+		for(i=0;i<size-1;i++){
+			j=i+1;
+			k=size-1;
+			while(k>j){
+				if(array[i]+array[j]+array[k]<0){
+					j++;
+				}else if(array[i]+array[j]+array[k]>0){
+					k--;
+				}else{
+					count++;
+					j++;
+					k--;
+				}
+			}
+		}
+		System.out.println(count);
 	}
 	// public void threeSum() {
 	// 	int cc = 0;
@@ -60,15 +108,23 @@ class ThreeSum {
 	// 	System.out.println(count);
 	// 	System.out.println("cc = " + cc);
 	// }
-	private static boolean containsDuplicates(int[] a) {
-		for (int i = 1; i < a.length; i++)
-			if (a[i] == a[i - 1]) return true;
-		return false;
-	}
-
 }
+/**.
+ * Class for solution.
+ */
 class Solution {
-	public static void main(String[] args) {
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution(){
+
+	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int inputs = scan.nextInt();
 		ThreeSum obj = new ThreeSum(inputs);
