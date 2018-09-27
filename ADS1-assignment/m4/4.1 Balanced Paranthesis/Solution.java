@@ -27,19 +27,25 @@ class BalancedParenthesis {
 				stack[size++] = elements[i];
 			} else if (elements[i].equals(")") || elements[i].equals("]") || elements[i].equals("}")) {
 				if (size != 0) {
-					if (stack[size - 1].equals("(") && elements[i].equals(")")) {
-						size--;
-					} else if (stack[size - 1].equals("[") && elements[i].equals("]")) {
-						size--;
-					} else if (stack[size - 1].equals("[") && elements[i].equals("]")) {
-						size--;
+					if (elements[i].equals(")")) {
+						if (stack[size - 1].equals("(")) {
+							size--;
+						}
+					} else if (elements[i].equals("]")) {
+						if (stack[size - 1].equals("[")) {
+							size--;
+						}
+					} else if (elements[i].equals("}")) {
+						if (stack[size - 1].equals("{")) {
+							size--;
+						}
 					}
 				}
 			}
 		}
 	}
 	public String check() {
-		if (size - 1 == 0) {
+		if (size - 1 != 0) {
 			return "YES";
 		}
 		return "NO";
