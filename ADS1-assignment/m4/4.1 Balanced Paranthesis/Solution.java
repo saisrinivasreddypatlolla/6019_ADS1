@@ -85,7 +85,7 @@ class BalancedParenthesis {
             }
         }
     }
-    /**
+    /**.
      * this method adds the element into stack
      *
      * @param      element  The element
@@ -93,7 +93,7 @@ class BalancedParenthesis {
     public void push(final String element) {
         stack[size++] = element;
     }
-    /**
+    /**.
      * this method to delete element
      */
     public void pop() {
