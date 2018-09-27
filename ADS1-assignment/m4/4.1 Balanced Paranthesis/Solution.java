@@ -31,7 +31,7 @@ final class Solution {
     }
 }
 /**.
- * Class for check given method is 
+ * Class for check given method is
  * balanced parenthesis.
  */
 class BalancedParenthesis {
@@ -63,7 +63,6 @@ class BalancedParenthesis {
                         "(") || elements[i].equals(
                         "[") || elements[i].equals("{")) {
                 push(elements[i]);
-                
             } else if (elements[i].equals(
                            ")") || elements[i].equals(
                            "]") || elements[i].equals("}")) {
@@ -91,13 +90,13 @@ class BalancedParenthesis {
      *
      * @param      element  The element
      */
-    public void push(final String element){
+    public void push(final String element) {
         stack[size++] = element;
     }
     /**
      * this method to delete element
      */
-    public void pop(){
+    public void pop() {
         size--;
     }
     /**.
