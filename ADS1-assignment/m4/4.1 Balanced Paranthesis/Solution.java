@@ -6,7 +6,7 @@ final class Solution {
 	/**.
 	 * Constructs the object.
 	 */
-	private Solution(){
+	private Solution() {
 
 	}
 	/**.
@@ -36,11 +36,11 @@ class BalancedParenthesis {
 	/**
 	 * { item_description }
 	 */
-	String[] stack;
+	private String[] stack;
 	/**.
 	 * { var_description }
 	 */
-	String[] elements;
+	private String[] elements;
 	/**.
 	 * { function_description }
 	 *
@@ -61,15 +61,15 @@ class BalancedParenthesis {
 			               "]") || elements[i].equals("}")) {
 				if (size != 0) {
 					if (elements[i].equals(")") && (
-						stack[size - 1].equals("("))) {
+					            stack[size - 1].equals("("))) {
 						size--;
 
-					} else if (elements[i].equals("]")&&(
-						stack[size - 1].equals("["))){
-							size--;
-					} else if (elements[i].equals("}")&&(
-						stack[size - 1].equals("{"))) {
-							size--;
+					} else if (elements[i].equals("]") && (
+					               stack[size - 1].equals("["))) {
+						size--;
+					} else if (elements[i].equals("}") && (
+					               stack[size - 1].equals("{"))) {
+						size--;
 					}
 				}
 			}
