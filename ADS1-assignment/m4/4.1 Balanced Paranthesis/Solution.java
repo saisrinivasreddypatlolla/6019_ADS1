@@ -4,8 +4,8 @@ class Solution {
 		String input;
 		Scanner scan = new Scanner(System.in);
 		int size = scan.nextInt();
-		BalancedParenthesis obj = new BalancedParenthesis();
 		for (int i = 0; i < size; i++) {
+			BalancedParenthesis obj = new BalancedParenthesis();
 			input = scan.next();
 			obj.add(input);
 			System.out.println(obj.check());
