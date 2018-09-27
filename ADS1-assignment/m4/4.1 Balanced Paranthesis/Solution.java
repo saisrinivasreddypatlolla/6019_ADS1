@@ -45,7 +45,7 @@ class BalancedParenthesis {
 		}
 	}
 	public String check() {
-		if (size - 1 == 0) {
+		if (size == 0) {
 			return "YES";
 		}
 		return "NO";
