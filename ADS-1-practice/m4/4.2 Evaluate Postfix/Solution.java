@@ -14,6 +14,7 @@ class Solution {
 				stack[size++] = Integer.parseInt(input[i]);
 			}
 		}
+		System.out.println(stack[0]);
 	}
 	public static void operation(String operator){
 		if(operator.equals("+")){
