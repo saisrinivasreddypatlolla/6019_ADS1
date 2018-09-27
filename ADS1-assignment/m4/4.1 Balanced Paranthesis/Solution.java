@@ -1,6 +1,7 @@
 import java.util.Scanner;
 /**.
- * { item_description }
+ * the main class for checking
+ * balanced parenthesis
  */
 final class Solution {
     /**.
@@ -10,7 +11,8 @@ final class Solution {
 
     }
     /**.
-     * { function_description }
+     * main function takes input fro console
+     * checks the given input is balanced or not.
      *
      * @param      args  The arguments
      */
@@ -29,23 +31,25 @@ final class Solution {
     }
 }
 /**.
- * Class for balanced parenthesis.
+ * Class for check given method is 
+ * balanced parenthesis.
  */
 class BalancedParenthesis {
     /**.
-     * { var_description }
+     * size of the stack array
      */
     private int size = 0;
     /**.
-     * { item_description }
+     * store the open braces
      */
     private String[] stack;
     /**.
-     * { var_description }
+     * store the input elements
      */
     private String[] elements;
     /**.
-     * { function_description }
+     * this method is to add inputs
+     * and perform stack operations on it.
      *
      * @param      input  The input
      */
@@ -58,7 +62,8 @@ class BalancedParenthesis {
             if (elements[i].equals(
                         "(") || elements[i].equals(
                         "[") || elements[i].equals("{")) {
-                stack[size++] = elements[i];
+                push(elements[i]);
+                
             } else if (elements[i].equals(
                            ")") || elements[i].equals(
                            "]") || elements[i].equals("}")) {
@@ -66,20 +71,34 @@ class BalancedParenthesis {
                     if (elements[i].equals(")") && (
                                 stack[size - 1].equals(
                                     "("))) {
-                        size--;
+                        pop();
 
                     } else if (elements[i].equals("]") && (
                                    stack[size - 1].equals(
                                        "["))) {
-                        size--;
+                        pop();
                     } else if (elements[i].equals("}") && (
                                    stack[size - 1].equals(
                                        "{"))) {
-                        size--;
+                        pop();
                     }
                 }
             }
         }
+    }
+    /**
+     * this method adds the element into stack
+     *
+     * @param      element  The element
+     */
+    public void push(final String element){
+        stack[size++] = element;
+    }
+    /**
+     * this method to delete element
+     */
+    public void pop(){
+        size--;
     }
     /**.
      * { function_description }
