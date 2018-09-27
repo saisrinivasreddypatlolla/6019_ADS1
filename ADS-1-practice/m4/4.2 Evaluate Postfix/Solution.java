@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public final class Solution {
+final class Solution {
     /**.
      * this is for size of array
      */
@@ -15,6 +15,12 @@ public final class Solution {
      * size of the given set of numbers
      */
     private static int size = 0;
+    /**.
+     * Constructs the object.
+     */
+    private Solution(){
+
+    }
     /**.
      * the main function is for the input and perform
      * operations on them.
