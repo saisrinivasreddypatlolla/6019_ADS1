@@ -19,12 +19,12 @@ final class Solution {
     public static void main(final String[] args) {
         String input;
         Scanner scan = new Scanner(System.in);
-        int size = scan.nextInt();
-        for (int i = 0; i < size; i++) {
+        int lines = scan.nextInt();
+        for (int i = 0; i < lines; i++) {
             BalancedParenthesis obj = new BalancedParenthesis();
             input = scan.next();
             obj.add(input);
-            System.out.println(obj.check());
+            System.out.println(obj.checkInput());
 
         }
 
@@ -104,7 +104,7 @@ class BalancedParenthesis {
      *
      * @return     { description_of_the_return_value }
      */
-    public String check() {
+    public String checkInput() {
         if (size == 0) {
             return "YES";
         }
