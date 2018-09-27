@@ -1,7 +1,11 @@
 import java.util.Scanner;
-class Solution {
-	static int[] stack = new int[20];
-	static int size = 0;
+/**
+ * Class for solution.
+ */
+final class Solution {
+	final static int twenty = 20;
+	private static int[] stack = new int[twenty];
+	private static int size = 0;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] input = scan.nextLine().split(" ");
@@ -16,18 +20,18 @@ class Solution {
 		}
 		System.out.println(stack[0]);
 	}
-	public static void operation(String operator){
-		if(operator.equals("+")){
-			stack[size-2] = stack[size-2]+stack[size-1];
+	public static void operation(String operator) {
+		if (operator.equals("+")) {
+			stack[size - 2] = stack[size - 2] + stack[size - 1];
 			size--;
-		}else if(operator.equals("-")){
-			stack[size-2] = stack[size-2]-stack[size-1];
+		} else if (operator.equals("-")) {
+			stack[size - 2] = stack[size - 2] - stack[size - 1];
 			size--;
-		}else if(operator.equals("*")){
-			stack[size-2] = stack[size-2]*stack[size-1];
+		} else if (operator.equals("*")) {
+			stack[size - 2] = stack[size - 2] * stack[size - 1];
 			size--;
-		}else if(operator.equals("/")){
-			stack[size-2] = stack[size-2]/stack[size-1];
+		} else if (operator.equals("/")) {
+			stack[size - 2] = stack[size - 2] / stack[size - 1];
 			size--;
 		}
 	}
