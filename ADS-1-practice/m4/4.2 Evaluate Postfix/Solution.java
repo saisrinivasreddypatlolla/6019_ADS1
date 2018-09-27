@@ -21,13 +21,13 @@ class Solution {
 			stack[size-2] = stack[size-2]+stack[size-1];
 			size--;
 		}else if(operator.equals("-")){
-			stack[size-2] = stack[size-2]+stack[size-1];
+			stack[size-2] = stack[size-2]-stack[size-1];
 			size--;
 		}else if(operator.equals("*")){
-			stack[size-2] = stack[size-2]+stack[size-1];
+			stack[size-2] = stack[size-2]*stack[size-1];
 			size--;
 		}else if(operator.equals("/")){
-			stack[size-2] = stack[size-2]+stack[size-1];
+			stack[size-2] = stack[size-2]/stack[size-1];
 			size--;
 		}
 	}
