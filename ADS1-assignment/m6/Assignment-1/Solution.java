@@ -3,6 +3,13 @@ import java.util.Scanner;
  * Class for add large numbers.
  */
 class AddLargeNumbers {
+    final static int TEN = 10;
+    /**.
+     * Constructs the object.
+     */
+    private AddLargeNumbers(){
+
+    }
     /**.
      * { function_description }
      *
@@ -40,7 +47,7 @@ class AddLargeNumbers {
     public static LinkedList addLargeNumbers(
         final LinkedList list1, final LinkedList list2) {
         LinkedList listObj = new LinkedList();
-        int size = 0, ten = 10;
+        int size = 0;
         if (list1.getSize() < list2.getSize()) {
             size = list2.getSize();
         } else {
@@ -50,8 +57,8 @@ class AddLargeNumbers {
         for (int i = size; i > 0; i--) {
             value = list1.removeEnd() + list2.removeEnd();
             value = value + carry;
-            carry = value / ten;
-            value = value % ten;
+            carry = value / TEN;
+            value = value % TEN;
             listObj.addStart(value);
         }
         if (carry > 0) {
@@ -188,7 +195,9 @@ class LinkedList {
      * @return     { description_of_the_return_value }
      */
     public int removeEnd() {
-        if (head == null) { return 0;}
+        if (head == null) {
+            return 0;
+        }
         if (size == 1) {
             int data = head.getDigit();
             head = null;
