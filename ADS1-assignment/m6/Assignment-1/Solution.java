@@ -2,12 +2,12 @@ import java.util.Scanner;
 /**.
  * Class for add large numbers.
  */
-class AddLargeNumbers {
-    final static int TEN = 10;
+final class AddLargeNumbers {
+    static final int TEN = 10;
     /**.
      * Constructs the object.
      */
-    private AddLargeNumbers(){
+    private AddLargeNumbers() {
 
     }
     /**.
