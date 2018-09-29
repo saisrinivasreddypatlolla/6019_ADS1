@@ -17,21 +17,23 @@ class AddLargeNumbers {
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList l = new LinkedList();
-        int size =0;
-        if(list1.getSize()<list2.getSize()){
+        int size = 0;
+        if (list1.getSize() < list2.getSize()) {
             size = list2.getSize();
-        }else{
+        } else {
             size = list1.getSize();
         }
-        int carry = 0, value=0;
-        for(int i=size;i>0;i--){
-            value = list1.removeEnd()+list2.removeEnd();
-            value=value+carry;
-            carry=value/10;
-            value=value%10;
+        int carry = 0, value = 0;
+        for (int i = size; i > 0; i--) {
+            value = list1.removeEnd() + list2.removeEnd();
+            value = value + carry;
+            carry = value / 10;
+            value = value % 10;
             l.addStart(value);
         }
-        l.addStart(carry);
+        if (carry > 0) {
+            l.addStart(carry);
+        }
         return l;
 
     }
@@ -118,11 +120,11 @@ class LinkedList {
         String str = "";
         while (temp.getAddress() != null) {
             str += temp.getDigit();
-            temp=temp.getAddress();
+            temp = temp.getAddress();
         }
         return str + temp.getDigit();
     }
-    public int getSize(){
+    public int getSize() {
         return this.size;
     }
     public void addStart(int item) {
