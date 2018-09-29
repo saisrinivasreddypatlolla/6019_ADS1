@@ -3,6 +3,9 @@ import java.util.Scanner;
  * Class for add large numbers.
  */
 final class AddLargeNumbers {
+    /**.
+     * constant for getting value
+     */
     static final int TEN = 10;
     /**.
      * Constructs the object.
@@ -11,11 +14,12 @@ final class AddLargeNumbers {
 
     }
     /**.
-     * { function_description }
+     * this method is used to divide number into digits
      *
      * @param      number  The number
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the linkedlist object stored
+     * with digits in it.
      */
     public static LinkedList numberToDigits(final String number) {
         LinkedList listObj = new LinkedList();
@@ -27,22 +31,25 @@ final class AddLargeNumbers {
 
     }
     /**.
-     * { function_description }
+     * this method is used to return the string of
+     * all digits in the object
      *
      * @param      list  The list
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the list object toString()
      */
     public static String digitsToNumber(final LinkedList list) {
         return list.toString();
     }
     /**.
-     * Adds large numbers.
+     * this method returns the linkedlist object
+     * which stores the added values of both input list.
      *
      * @param      list1  The list 1
      * @param      list2  The list 2
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the linkedlist object
+     * which stores the added values of both input list.
      */
     public static LinkedList addLargeNumbers(
         final LinkedList list1, final LinkedList list2) {
@@ -79,7 +86,7 @@ public final class Solution {
 
     }
     /**.
-     * { function_description }
+     * main method to do operations on the other classess.
      *
      * @param      args  The arguments
      */
@@ -118,15 +125,18 @@ class LinkedList {
      */
     class Node {
         /**.
-         * { var_description }
+         * this variables stores the digit.
          */
         private int digit;
         /**.
-         * { var_description }
+         * this variable stores the address
+         * of the other node which it has to be
+         * linked
          */
         private Node address;
         /**.
-         * Constructs the object.
+         * Constructs the object
+         * initializes the digit variable.
          *
          * @param      item  The item
          */
@@ -159,15 +169,15 @@ class LinkedList {
         }
     }
     /**.
-     * { var_description }
+     * size of the nodes in the linked list.
      */
     private int size = 0;
     /**.
-     * { var_description }
+     * first node of the linked list.
      */
     private Node head;
     /**.
-     * { var_description }
+     * last node of the linked list.
      */
     private Node tail;
     /**.
@@ -190,9 +200,9 @@ class LinkedList {
         size++;
     }
     /**.
-     * Removes an end.
+     * Removes the item at the end.
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the value that is removed.
      */
     public int removeEnd() {
         if (head == null) {
@@ -237,7 +247,8 @@ class LinkedList {
         return this.size;
     }
     /**.
-     * Adds a start.
+     * Adds the item at the start position of
+     * linkedlist.
      *
      * @param      item  The item
      */
