@@ -27,11 +27,14 @@ class AddLargeNumbers {
         // System.out.println(list1.toString()+" "+list1.getSize());
         for(int i=size;i>0;i--){
             // System.out.println(value+" after "+carry);
-            value+=carry;
             value = list1.removeEnd()+list2.removeEnd();
-            l.addStart(value%10+carry);
+            // int out = value%10+carry;
+            value=value+carry;
             carry=value/10;
             value=value%10;
+            l.addStart(value);
+            // carry=value/10;
+            // value=value%10;
             // System.out.println(value+" "+carry);
         }
         return l;
