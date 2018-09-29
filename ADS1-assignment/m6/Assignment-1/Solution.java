@@ -12,13 +12,28 @@ class AddLargeNumbers {
     }
 
     public static String digitsToNumber(LinkedList list) {
-        // String s = "";
         return list.toString();
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList l = new LinkedList();
-
+        int size =0;
+        if(list1.getSize()<list2.getSize()){
+            size = list2.getSize();
+        }else{
+            size = list1.getSize();
+        }
+        int carry = 0, value=0;
+        // System.out.println(list1.toString()+" "+list1.getSize());
+        for(int i=size;i>0;i--){
+            // System.out.println(value+" after "+carry);
+            value+=carry;
+            value = list1.removeEnd()+list2.removeEnd();
+            l.addStart(value%10+carry);
+            carry=value/10;
+            value=value%10;
+            // System.out.println(value+" "+carry);
+        }
         return l;
 
     }
@@ -82,6 +97,24 @@ class LinkedList {
         tail = temp;
         size++;
     }
+    public int removeEnd() {
+        if (head == null) return 0;
+        if (size == 1) {
+            int data = head.getDigit();
+            head = null;
+            tail = null;
+            return data;
+        }
+        Node temp = head;
+        while (temp.address.address != null) {
+            temp = temp.address;
+        }
+        int data = temp.getAddress().getDigit();
+        temp.address = null;
+        tail = temp;
+        size--;
+        return data;
+    }
     public String toString() {
         Node temp = head;
         String str = "";
@@ -90,5 +123,21 @@ class LinkedList {
             temp=temp.getAddress();
         }
         return str + temp.getDigit();
+    }
+    public int getSize(){
+        return this.size;
+    }
+    public void addStart(int item) {
+        if (size == 0) {
+            head = new Node(item);
+            head.address = null;
+            tail = head;
+            size++;
+            return;
+        }
+        Node temp = new Node(item);
+        temp.address = head;
+        head = temp;
+        size++;
     }
 }
