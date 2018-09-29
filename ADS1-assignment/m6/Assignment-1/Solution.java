@@ -37,9 +37,10 @@ class AddLargeNumbers {
      *
      * @return     { description_of_the_return_value }
      */
-    public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
+    public static LinkedList addLargeNumbers(
+        final LinkedList list1, final LinkedList list2) {
         LinkedList listObj = new LinkedList();
-        int size = 0;
+        int size = 0, ten = 10;
         if (list1.getSize() < list2.getSize()) {
             size = list2.getSize();
         } else {
@@ -49,8 +50,8 @@ class AddLargeNumbers {
         for (int i = size; i > 0; i--) {
             value = list1.removeEnd() + list2.removeEnd();
             value = value + carry;
-            carry = value / 10;
-            value = value % 10;
+            carry = value / ten;
+            value = value % ten;
             listObj.addStart(value);
         }
         if (carry > 0) {
@@ -67,7 +68,7 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
 
     }
     /**.
@@ -91,8 +92,11 @@ public final class Solution {
         case "addLargeNumbers":
             pDigits = AddLargeNumbers.numberToDigits(p);
             qDigits = AddLargeNumbers.numberToDigits(q);
-            LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+            LinkedList result = AddLargeNumbers.addLargeNumbers(
+                                    pDigits, qDigits);
             System.out.println(AddLargeNumbers.digitsToNumber(result));
+            break;
+        default:
             break;
         }
     }
@@ -184,7 +188,7 @@ class LinkedList {
      * @return     { description_of_the_return_value }
      */
     public int removeEnd() {
-        if (head == null) return 0;
+        if (head == null) { return 0;}
         if (size == 1) {
             int data = head.getDigit();
             head = null;
