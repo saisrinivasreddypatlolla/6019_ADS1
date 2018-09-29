@@ -1,22 +1,44 @@
 import java.util.Scanner;
+/**.
+ * Class for add large numbers.
+ */
 class AddLargeNumbers {
-
-    public static LinkedList numberToDigits(String number) {
-        LinkedList l = new LinkedList();
+    /**.
+     * { function_description }
+     *
+     * @param      number  The number
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static LinkedList numberToDigits(final String number) {
+        LinkedList listObj = new LinkedList();
         String[] digits = number.split("");
         for (int i = 0; i < digits.length; i++) {
-            l.addEnd(Integer.parseInt(digits[i]));
+            listObj.addEnd(Integer.parseInt(digits[i]));
         }
-        return l;
+        return listObj;
 
     }
-
-    public static String digitsToNumber(LinkedList list) {
+    /**.
+     * { function_description }
+     *
+     * @param      list  The list
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static String digitsToNumber(final LinkedList list) {
         return list.toString();
     }
-
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-        LinkedList l = new LinkedList();
+    /**.
+     * Adds large numbers.
+     *
+     * @param      list1  The list 1
+     * @param      list2  The list 2
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
+        LinkedList listObj = new LinkedList();
         int size = 0;
         if (list1.getSize() < list2.getSize()) {
             size = list2.getSize();
@@ -29,18 +51,31 @@ class AddLargeNumbers {
             value = value + carry;
             carry = value / 10;
             value = value % 10;
-            l.addStart(value);
+            listObj.addStart(value);
         }
         if (carry > 0) {
-            l.addStart(carry);
+            listObj.addStart(carry);
         }
-        return l;
+        return listObj;
 
     }
 }
+/**.
+ * Class for solution.
+ */
+public final class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution(){
 
-public class Solution {
-    public static void main(String[] args) {
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
@@ -63,40 +98,91 @@ public class Solution {
     }
 
 }
+/**.
+ * List of linkeds.
+ */
 class LinkedList {
+    /**.
+     * Class for node.
+     */
     class Node {
-        int digit;
-        Node address;
-        Node(int item) {
+        /**.
+         * { var_description }
+         */
+        private int digit;
+        /**.
+         * { var_description }
+         */
+        private Node address;
+        /**.
+         * Constructs the object.
+         *
+         * @param      item  The item
+         */
+        Node(final int item) {
             this.digit = item;
         }
+        /**.
+         * Gets the digit.
+         *
+         * @return     The digit.
+         */
         public int getDigit() {
             return this.digit;
         }
+        /**.
+         * Gets the address.
+         *
+         * @return     The address.
+         */
         public Node getAddress() {
             return this.address;
         }
-        public void setAddress(Node address1) {
+        /**.
+         * Sets the address.
+         *
+         * @param      address1  The address 1
+         */
+        public void setAddress(final Node address1) {
             this.address = address1;
         }
     }
-    int size = 0;
-    Node head;
-    Node tail;
-    public void addEnd(int item) {
+    /**.
+     * { var_description }
+     */
+    private int size = 0;
+    /**.
+     * { var_description }
+     */
+    private Node head;
+    /**.
+     * { var_description }
+     */
+    private Node tail;
+    /**.
+     * Adds an end.
+     *
+     * @param      item  The item
+     */
+    public void addEnd(final int item) {
         if (size == 0) {
             head = new Node(item);
             tail = head;
-            head.address = null;
+            head.setAddress(null);
             size++;
             return;
         }
         Node temp = new Node(item);
-        temp.address = null;
-        tail.address = temp;
+        temp.setAddress(null);
+        tail.setAddress(temp);
         tail = temp;
         size++;
     }
+    /**.
+     * Removes an end.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int removeEnd() {
         if (head == null) return 0;
         if (size == 1) {
@@ -106,15 +192,20 @@ class LinkedList {
             return data;
         }
         Node temp = head;
-        while (temp.address.address != null) {
-            temp = temp.address;
+        while (temp.getAddress().getAddress() != null) {
+            temp = temp.getAddress();
         }
         int data = temp.getAddress().getDigit();
-        temp.address = null;
+        temp.setAddress(null);
         tail = temp;
         size--;
         return data;
     }
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         Node temp = head;
         String str = "";
@@ -124,19 +215,29 @@ class LinkedList {
         }
         return str + temp.getDigit();
     }
+    /**.
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
         return this.size;
     }
-    public void addStart(int item) {
+    /**.
+     * Adds a start.
+     *
+     * @param      item  The item
+     */
+    public void addStart(final int item) {
         if (size == 0) {
             head = new Node(item);
-            head.address = null;
+            head.setAddress(null);
             tail = head;
             size++;
             return;
         }
         Node temp = new Node(item);
-        temp.address = head;
+        temp.setAddress(head);
         head = temp;
         size++;
     }
