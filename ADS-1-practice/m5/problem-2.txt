@@ -1,0 +1,11 @@
+For the given problem, Lets consider the q as 1,2,3,4,5,6,7,8,9
+
+After the first while loop, all the elements are dequeued and push onto a stack. which gives the ouput as 
+
+-> 1,2,3,4,5,6,7,8,9
+
+After the second while lopp, all the elements in the stack are poped and enqueued onto the queue named q, which gives the output aas 
+
+-> 9,8,7,6,5,4,3,2,1
+
+Thus the following Operaions performs the Reverising of the elements in the queue
