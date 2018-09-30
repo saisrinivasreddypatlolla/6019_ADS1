@@ -91,7 +91,7 @@ class Queue {
         /**.
          * Node constructor with arguments
          *
-         * @param      data  The data
+         * @param      data1  The data
          */
         Node(final int data1) {
             this.data = data1;
