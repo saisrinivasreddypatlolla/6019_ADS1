@@ -45,7 +45,7 @@ public final class Solution {
         }
     }
 }
-/**
+/**.
  * Dequeue class for the implimentaion of dequeue
  *
  * @param      <E>   { Generic }
@@ -54,11 +54,14 @@ class Deque<E> {
     /**.
      * Size variable
      */
-    int size;
+    private int size;
     /**.
      * Object for linked list
      */
-    LinkedList<E> linkedQueue;
+    private LinkedList<E> linkedQueue;
+    /**.
+     * Constructs the object.
+     */
     Deque() {
         linkedQueue = new LinkedList<E>();
         size = 0;
