@@ -58,7 +58,7 @@ public final class Solution {
  */
 class Queue {
     /**.
-     * size variable 
+     * size variable
      */
     private int size;
     /**.
@@ -76,11 +76,11 @@ class Queue {
         /**.
          * data variable to store the data
          */
-        int data;
+        private int data;
         /**.
          * Node object to point to the next Node
          */
-        Node link;
+        private Node link;
         /**.
          * Node constructor without arguments
          */
@@ -93,8 +93,8 @@ class Queue {
          *
          * @param      data  The data
          */
-        Node(final int data) {
-            this.data = data;
+        Node(final int data1) {
+            this.data = data1;
             this.link = null;
         }
     }
@@ -127,7 +127,7 @@ class Queue {
      *
      * @return     { description_of_the_return_value }
      */
-    public int deQueue(){
+    public int deQueue() {
         Node current = head;
         if (size == 1) {
             size--;
@@ -135,9 +135,9 @@ class Queue {
             head = null;
             return current.data;
         }
-        
+
         int counter = 1;
-        while (counter<size-1) {
+        while (counter < size - 1) {
             counter++;
             current = current.link;
         }
@@ -159,7 +159,7 @@ class Queue {
      *
      * @return     The size.
      */
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 }
