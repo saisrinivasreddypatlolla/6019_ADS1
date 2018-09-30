@@ -50,25 +50,25 @@ public final class Solution {
  *
  * @param      <E>   { Generic }
  */
-class Deque<E>{
+class Deque<E> {
     /**.
      * Size variable
      */
     int size;
     /**.
-     * Object for linked list 
+     * Object for linked list
      */
     LinkedList<E> linkedQueue;
-    Deque(){
+    Deque() {
         linkedQueue = new LinkedList<E>();
-        size =0;
+        size = 0;
     }
     /**.
      * is empty method to check weather dequeqe is empty or not
      *
      * @return     True if empty, False otherwise.
      */
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
     /**.
@@ -76,7 +76,7 @@ class Deque<E>{
      *
      * @return     { description_of_the_return_value }
      */
-    public int size(){
+    public int size() {
         return size;
     }
     /**.
@@ -84,7 +84,7 @@ class Deque<E>{
      *
      * @param      item  The item
      */
-    public void pushLeft(final E item){
+    public void pushLeft(final E item) {
         linkedQueue.addAtStart(item);
         size++;
         linkedQueue.print();
@@ -94,7 +94,7 @@ class Deque<E>{
      *
      * @param      item  The item
      */
-    public void pushRight(final E item){
+    public void pushRight(final E item) {
         linkedQueue.addAtEnd(item);
         size++;
         linkedQueue.print();
@@ -102,14 +102,14 @@ class Deque<E>{
     /**.
      * remove the elemenet from left end
      */
-    public void popLeft(){
-        if(size==0){
+    public void popLeft() {
+        if (size == 0) {
             System.out.println("Deck is empty");
             return;
         }
         size--;
         linkedQueue.removeAtStart();
-        if(linkedQueue.getSize()==0) {
+        if (linkedQueue.getSize() == 0) {
             System.out.println("[]");
             return;
         }
@@ -118,14 +118,14 @@ class Deque<E>{
     /**.
      * removing from right end;
      */
-    public void popRight(){
-        if(size==0){
+    public void popRight() {
+        if (size == 0) {
             System.out.println("Deck is empty");
             return;
         }
         size--;
         linkedQueue.removeAtEnd();
-        if(linkedQueue.getSize()==0) {
+        if (linkedQueue.getSize() == 0) {
             System.out.println("[]");
             return;
         }
