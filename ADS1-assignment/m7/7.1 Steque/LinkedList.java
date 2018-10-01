@@ -148,7 +148,7 @@ class LinkedList {
 	public void print() {
 		Node obj = head;
 		if (head == null) {
-			System.out.println("Steque is Empty");
+			System.out.println("Steque is empty.");
 			return;
 		}
 		while (obj.getAddress() != null) {
