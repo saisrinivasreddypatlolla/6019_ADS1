@@ -1,28 +1,81 @@
+/**.
+ * Class for node.
+ */
 class Node {
+	/**.
+	 * this variable stores
+	 * the input data.
+	 */
 	int data;
+	/**.
+	 * this variable stores the next address.
+	 */
 	Node address;
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      data1  The data 1
+	 */
 	Node(int data1) {
 		this.data = data1;
 
 	}
+	/**.
+	 * Constructs the object.
+	 */
 	Node() {
 
 	}
+	/**.
+	 * Gets the data.
+	 *
+	 * @return     The data.
+	 */
 	public int getData() {
 		return this.data;
 	}
+	/**.
+	 * Gets the address.
+	 *
+	 * @return     The address.
+	 */
 	public Node getAddress() {
 		return this.address;
 	}
+	/**.
+	 * Sets the address.
+	 *
+	 * @param      address1  The address 1
+	 */
 	public void setAddress(Node address1) {
 		this.address = address1;
 	}
 }
+/**.
+ * List of linkeds.
+ */
 class LinkedList {
+	/**.
+	 * size of the linked list.
+	 */
 	int size = 0;
+	/**.
+	 * head pointing to starting
+	 * node.
+	 */
 	Node head;
+	/**.
+	 * tail pointing to end node
+	 */
 	Node tail;
-	public void addStart(int item) {
+	/**.
+	 * Adds a node at start.
+	 * time complexity of this method is
+	 * O(1)
+	 *
+	 * @param      item  The item
+	 */
+	public void addStart(final int item) {
 		if (size == 0) {
 			head = new Node(item);
 			head.address = null;
@@ -35,7 +88,13 @@ class LinkedList {
 		head = temp;
 		size++;
 	}
-	public void addEnd(int item) {
+	/**
+	 * Adds a node at end.
+	 * time complexity of the method is O(1)
+	 *
+	 * @param      item  The item
+	 */
+	public void addEnd(final int item) {
 		if (size == 0) {
 			head = new Node(item);
 			tail = head;
@@ -49,7 +108,16 @@ class LinkedList {
 		tail = temp;
 		size++;
 	}
-	public void addElement(int element1, int item) {
+	/**.
+	 * Adds an item after the element.
+	 * time complexity is O(N)
+	 * to find the element we have check
+	 * element from the head to that node.
+	 *
+	 * @param      element1  The element 1
+	 * @param      item      The item
+	 */
+	public void addElement(final int element1, final int item) {
 		if (size == 0) {
 			head = new Node(item);
 			head.address = null;
@@ -66,7 +134,16 @@ class LinkedList {
 		obj.address = temp;
 		size++;
 	}
-	public void addPosition(int index, int item) {
+	/**.
+	 * Adds an item in that position.
+	 * Time complexity is O(N)
+	 * to reach the index we have to take an counter
+	 * from head until to reach the index.
+	 *
+	 * @param      index  The index
+	 * @param      item   The item
+	 */
+	public void addPosition(final int index, final int item) {
 		if (index > size || index < 0) return;
 		int counter = 0;
 		Node temp = head;
@@ -80,6 +157,10 @@ class LinkedList {
 		size++;
 
 	}
+	/**.
+	 * Removes at the start of linkedlist.
+	 * Time complexity is O(N)
+	 */
 	public void removeStart() {
 		if (head == null) return;
 		if (size == 1) {
@@ -90,6 +171,13 @@ class LinkedList {
 		head = head.address;
 		size--;
 	}
+	/**.
+	 * Removes at the end of linkedlist.
+	 * time complexity is O(N)
+	 * to reach last element we have to take
+	 * an temp node from start to until to reach
+	 * the previous element from last.
+	 */
 	public void removeEnd() {
 		if (head == null) return;
 		if (size == 1) {
@@ -106,7 +194,15 @@ class LinkedList {
 		tail = temp;
 		size--;
 	}
-	public void removeElement(int item) {
+	/**.
+	 * Removes the item after that element.
+	 * time complexity is O(N)
+	 * to find the element we have check
+	 * element from the head to that node.
+	 *
+	 * @param      item  The item
+	 */
+	public void removeElement(final int item) {
 		if (head == null) return;
 		if (size == 1) {
 			head = null;
@@ -126,7 +222,15 @@ class LinkedList {
 		size--;
 
 	}
-	public void removePosition(int index) {
+	/**.
+	 * Removes an item in that position.
+	 * Time complexity is O(N)
+	 * to reach the index we have to take an counter
+	 * from head until to reach the index.
+	 *
+	 * @param      index  The index
+	 */
+	public void removePosition(final int index) {
 		if (head == null) return;
 		if (size == 1) {
 			head = null;
@@ -142,9 +246,18 @@ class LinkedList {
 		obj.address = obj.getAddress().getAddress();
 		size--;
 	}
-	public void setSize(int value) {
+	/**.
+	 * Sets the size.
+	 *
+	 * @param      value  The value
+	 */
+	public void setSize(final int value) {
 		this.size = value;
 	}
+	/**.
+	 * this method prints the all the elements
+	 * in linkedlist.
+	 */
 	public void print() {
 		Node obj = head;
 		if (head == null) {
