@@ -8,6 +8,7 @@ class Solution{
 		Scanner scan = new Scanner(System.in);
 		LinkedList obj = new LinkedList();
 		int values = scan.nextInt();
+		scan.nextLine();
 		while(scan.hasNext()){
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
