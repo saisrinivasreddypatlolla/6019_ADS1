@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class Solution{
 	Solution(){
 
@@ -8,8 +9,11 @@ class Solution{
 		LinkedList obj = new LinkedList();
 		int values = scan.nextInt();
 		while(scan.hasNext()){
-			String[] tokens = scan.nextLine().split(" ");
-			if(tokens==null){
+			String line = scan.nextLine();
+			String[] tokens = line.split(" ");
+			// System.out.println(Arrays.toString(tokens)+" "+tokens==null);
+			if(line.length()==0){
+				// System.out.println("hello");
 				obj.setSize(0);
 				System.out.println();
 			}else{
