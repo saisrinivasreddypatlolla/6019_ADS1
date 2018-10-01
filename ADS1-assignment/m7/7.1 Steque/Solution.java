@@ -7,8 +7,8 @@ class Solution{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		LinkedList obj = new LinkedList();
-		int values = scan.nextInt();
-		scan.nextLine();
+		int values = Integer.parseInt(scan.nextLine());
+		// scan.nextLine();
 		while(scan.hasNext()){
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
