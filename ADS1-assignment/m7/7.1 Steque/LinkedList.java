@@ -151,10 +151,10 @@ class LinkedList {
 			System.out.println("Steque is Empty");
 			return;
 		}
-		while (obj != null) {
+		while (obj.getAddress() != null) {
 			System.out.print(obj.data + ", ");
 			obj = obj.getAddress();
-		}
+		}System.out.print(obj.data);
 		System.out.println();
 	}
 }
