@@ -1,24 +1,31 @@
 import java.util.Scanner;
-import java.util.Arrays;
-class Solution{
-	Solution(){
+/**.
+ * Class for solution.
+ */
+class Solution {
+	/**.
+	 * Constructs the object.
+	 */
+	Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**.
+	 * the main function to perform operations.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		LinkedList obj = new LinkedList();
 		int values = Integer.parseInt(scan.nextLine());
-		// scan.nextLine();
-		while(scan.hasNext()){
+		while (scan.hasNext()) {
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
-			// System.out.println(Arrays.toString(tokens)+" "+tokens==null);
-			if(line.length()==0){
-				// System.out.println("hello");
+			if (line.length() == 0) {
 				obj.setSize(0);
 				System.out.println();
-			}else{
-				switch(tokens[0]){
+			} else {
+				switch (tokens[0]) {
 				case "push":
 					obj.addStart(Integer.parseInt(tokens[1]));
 					obj.print();
