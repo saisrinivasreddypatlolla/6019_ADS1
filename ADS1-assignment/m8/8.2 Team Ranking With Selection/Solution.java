@@ -28,7 +28,8 @@ class TeamInfo {
      * @param      lost1  The lost1
      * @param      draws1  The draws1
      */
-    TeamInfo(final String name1, final int wins1, final int lost1, final int draws1) {
+    TeamInfo(final String name1, final int wins1,
+        final int lost1, final int draws1) {
         name = name1;
         wins = wins1;
         losses = lost1;
