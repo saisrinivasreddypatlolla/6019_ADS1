@@ -25,51 +25,49 @@ class TeamInfo {
      *
      * @param      name1  The name1
      * @param      wins1   The wins1
-     * @param      losses1  The losses1
+     * @param      lost1  The lost1
      * @param      draws1  The draws1
      */
-    TeamInfo(final String name1, final int wins1, final int losses1,
-             final int draws1) {
+    TeamInfo(final String name1, final int wins1, final int lost1, final int draws1) {
         name = name1;
         wins = wins1;
-        losses = losses1;
+        losses = lost1;
         draws = draws1;
     }
 
     /**
-     * Method to check which value of Team is higher is lower.
+     * Method for Comparing the Objects w.r.t Wins, Losses, Draws.
      *
      * @param      that  The that
      *
-     * @return     Returns the boolean Value true if there is need to swap
-     *               else false
+     * @return     { description_of_the_return_value }
      */
-    public boolean less(final TeamInfo that) {
+    public int compareTo(final TeamInfo that) {
         if (this.wins < that.wins) {
-            return true;
+            return 1;
         }
         if (this.wins > that.wins) {
-            return false;
+            return -1;
         } else {
             if (this.losses < that.losses) {
-                return false;
+                return -1;
             }
             if (this.losses > that.losses) {
-                return true;
+                return 1;
             } else {
                 if (this.draws < that.draws) {
-                    return true;
+                    return 1;
                 }
                 if (this.draws > that.draws) {
-                    return false;
+                    return -1;
                 }
             }
         }
-        return false;
+        return 0;
     }
 
     /**
-     * Gets the Team Name.
+     * Gets the name of the Team.
      *
      * @return     The name.
      */
@@ -80,65 +78,15 @@ class TeamInfo {
 
 
 /**
- * Class for selection sort.
- */
-class SelectionSort {
-
-    /**
-     * Sorting of TeamInfo Objects based on Wins, losses, draws
-     * using selection sort.
-     * Complexity of Selection Sort is O(N^2).
-     * Because It uses nested loops.
-     * One for loop and a while loop
-     * So the complexity would be O(N^2).
-     *
-     * @param      teams  The teams
-     *
-     * @return     Returns the sorted array of objects
-     */
-    public TeamInfo[] selectsort(final TeamInfo[] teams) {
-        int min = 0;
-        TeamInfo[] sortedteams = teams;
-        for (int i = 0; i < sortedteams.length; i++) {
-            min = i;
-            for (int j = i + 1; j < sortedteams.length; j++) {
-                if (sortedteams[min].less(sortedteams[j])) {
-                    min = j;
-                }
-            }
-            sortedteams = exchange(sortedteams, min, i);
-        }
-        return teams;
-    }
-
-    /**
-     * This method is used to swap the objects in an array.
-     *
-     * @param      teams  The teams
-     * @param      min    The minimum
-     * @param      index  The index
-     *
-     * @return     Returns the array after swapping the objects
-     */
-    public TeamInfo[] exchange(final TeamInfo[] teams, final int min,
-                               final int index) {
-        TeamInfo temp = teams[min];
-        teams[min] = teams[index];
-        teams[index] = temp;
-        return teams;
-    }
-}
-
-/**
  * Class for lead board.
  */
 class LeadBoard {
     /**
-     * Object of Selection Sort class.
+     * Object for Insertion Sort class.
      */
-    private SelectionSort sort = new SelectionSort();
+    private InsertionSort sorted = new InsertionSort();
     /**
-     * Creates the object array of Class TeamInfo.
+     * Object Array for TeamInfo Class.
      */
     private TeamInfo[] teams;
     /**
@@ -155,15 +103,15 @@ class LeadBoard {
     }
 
     /**
-     * Resize Method for Resizing object Array.
+     * Resize Method is used to resize the array.
      */
     public void resize() {
         teams = Arrays.copyOf(teams, teams.length + 1);
     }
 
     /**
-     * Adds a team to Object Array.
-     * Complexity of Add is O(1).
+     * Adds a team to the Object Array.
+     * Compelxity for adding is O(1).
      *
      * @param      team  The team
      */
@@ -173,12 +121,13 @@ class LeadBoard {
         }
         teams[size++] = team;
     }
+
     /**
-     * To Print the Team Names after sorting.
-     * Complexity of Print is O(N).
+     * Print Method is used to print the Names of Sorted Teams.
+     * Complexity of Print Method is O(N) it depends upon Size of Array.
      */
     public void print() {
-        TeamInfo[] sortedteams = sort.selectsort(teams);
+        TeamInfo[] sortedteams = sorted.sorting(teams);
         for (int i = 0; i < size - 1; i++) {
             System.out.print(sortedteams[i].getName() + ",");
         }
@@ -186,6 +135,48 @@ class LeadBoard {
     }
 }
 
+/**
+ * Class for Insertion Sort.
+ */
+class InsertionSort {
+
+    /**
+     * Constructs the object.
+     */
+    InsertionSort() {
+        //Not Using This Constructor.
+    }
+
+    /**
+     * Method for Sorting all the objects in object array using Insertion Sort.
+     * Complexity for Insertion Sort is O(N^2).
+     * There is a nested loop a while loop inside for loop.
+     * The for loop iterates N times.
+     * The while loop iterates N times in the Worst Case.
+     * Then the Complexity would be O(N^2).
+     *
+     * @param      teams  The teams
+     *
+     * @return     { It returns Sorted Object Array }.
+     */
+    public TeamInfo[] sorting(final TeamInfo[] teams) {
+        int j = 0;
+        for (int i = 1; i < teams.length; i++) {
+            TeamInfo team = teams[i];
+            j = i - 1;
+            int value = teams[i].compareTo(teams[j]);
+            while (j >= 0 && value == -1) {
+                teams[j + 1] = teams[j];
+                j -= 1;
+                if (j >= 0) {
+                    value = team.compareTo(teams[j]);
+                }
+            }
+            teams[j + 1] = team;
+        }
+        return teams;
+    }
+}
 
 
 /**
@@ -196,12 +187,11 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        //Not Using this Constructor.
+        //Not Using this Constrcutor.
     }
     /**
-     * Main Method for Sorting the Teams using Selection Sort.
-     * The complexity of main method is O(N).
-     * Because it iterates whenever it has an input.
+     * Main Method for Sorting Teams Using Insertion Sort.
+     * Complexity for Main Method is O(N).
      *
      * @param      args  The arguments
      */
@@ -211,9 +201,11 @@ public final class Solution {
         String[] info = null;
         while (scan.hasNext()) {
             info = scan.nextLine().split(",");
-            cricketobj.addTeam(new TeamInfo(info[0], Integer.parseInt(info[1]),
-                                            Integer.parseInt(info[2]),
-                                            Integer.parseInt(info[2 + 1])));
+           TeamInfo team = new TeamInfo(info[0], Integer.parseInt(info[1]),
+                Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1]));
+
+
+            cricketobj.addTeam(team);
         }
         cricketobj.print();
     }
