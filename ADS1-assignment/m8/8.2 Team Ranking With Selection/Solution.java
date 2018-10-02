@@ -28,7 +28,8 @@ class TeamInfo {
      * @param      losses1  The losses1
      * @param      draws1  The draws1
      */
-    TeamInfo(final String name1, final int wins1, final int losses1, final int draws1) {
+    TeamInfo(final String name1, final int wins1, final int losses1,
+             final int draws1) {
         name = name1;
         wins = wins1;
         losses = losses1;
@@ -120,7 +121,7 @@ class SelectionSort {
      * @return     Returns the array after swapping the objects
      */
     public TeamInfo[] exchange(final TeamInfo[] teams, final int min,
-                                final int index) {
+                               final int index) {
         TeamInfo temp = teams[min];
         teams[min] = teams[index];
         teams[index] = temp;
@@ -211,7 +212,7 @@ public final class Solution {
         while (scan.hasNext()) {
             info = scan.nextLine().split(",");
             cricketobj.addTeam(new TeamInfo(info[0], Integer.parseInt(info[1]),
-                Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1])));
+                                            Integer.parseInt(info[2]), Integer.parseInt(info[2 + 1])));
         }
         cricketobj.print();
     }
