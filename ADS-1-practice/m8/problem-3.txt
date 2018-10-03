@@ -1,0 +1,3 @@
+Which method runs faster for an array with all keys identical, basic selection sort or basic insertion sort?
+
+Insertion sort runs fater than selection sort when array with all keys identical because in selection sort we have to sort the whole array even it is sorted , parially sorted or fully sorted. whereas in insertion sort when all keys are identical it will not iterate because it is not greater and all the keys are of same value.
