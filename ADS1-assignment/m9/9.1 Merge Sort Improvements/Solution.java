@@ -6,7 +6,7 @@ class Merge {
 	/**
 	 * cutoff to insertion sort.
 	 */
-	private final int CUTOFF = 7;
+	private final int cutOff = 7;
 	/**
 	 * Constructs the object.
 	 * Time complexity of this method is O(1).
@@ -52,7 +52,7 @@ class Merge {
 	 */
 	public void sort(final Comparable[] array, final Comparable[] aux,
 	                 final int low, final int high) {
-		if (high <= low + CUTOFF) {
+		if (high <= low + cutOff) {
 			insertionSort(aux, low, high);
 			System.out.println("Insertion sort method invoked...");
 			return;
@@ -65,7 +65,8 @@ class Merge {
 				aux[i] = array[i];
 			}
 			System.out.println(
-			    "Array is already sorted. So, skipped the call to merge...");
+			    "Array is already sorted. So,"
+			    + " skipped the call to merge...");
 			return;
 		}
 		merge(array, aux, low, mid, high);
@@ -91,7 +92,8 @@ class Merge {
 	public void insertionSort(final Comparable[] array,
 	                          final int low, final int high) {
 		for (int i = low; i <= high; i++) {
-			for (int j = i; j > low && less(array[j], array[j - 1]); j--) {
+			for (int j = i; j > low && less(
+			            array[j], array[j - 1]); j--) {
 				exch(array, j, j - 1);
 			}
 		}
