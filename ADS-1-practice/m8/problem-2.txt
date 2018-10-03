@@ -1,0 +1,83 @@
+Array to be Sorted => a[] = [E,A,S,Y,Q,U,E,S,T,I,O,N]
+sorting using the Insertion sort
+STEP-1
+0 1 2 3 4 5 6 7 8 9 10 11
+E A S Y Q U E S T I O  N
+in Insertion sort we will start sorting from the j=1th index and after sorting we will increment the j value till the whole array is sorted
+
+Step-2
+j=1
+0 1 2 3 4 5 6 7 8 9 10 11
+A E S Y Q U E S T I O  N
+
+increment j value.
+
+Step-3
+j=2
+0 1 2 3 4 5 6 7 8 9 10 11
+A E S Y Q U E S T I O  N
+
+increment j value.
+
+Step-4
+j=3
+0 1 2 3 4 5 6 7 8 9 10 11
+A E S Y Q U E S T I O  N
+
+increment j value.
+
+Step-5
+j=4
+0 1 2 3 4 5 6 7 8 9 10 11
+A E Q S Y U E S T I O  N
+
+increment j value.
+Step-6
+j=5
+0 1 2 3 4 5 6 7 8 9 10 11
+A E Q S U Y E S T I O  N
+
+increment j value.
+Step-7
+j=6
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E Q S U Y S T I O  N
+
+increment j value.
+
+Step-8
+j=7
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E Q S S U Y T I O  N
+
+increment j value.
+
+Step-9
+j=8
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E Q S S T U Y I O  N
+
+increment j value.
+
+Step-10
+j=9
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I Q S S T U Y O  N
+
+increment j value.
+
+Step-11
+j=10
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I O Q S S T U Y  N
+
+increment j value.
+
+Step-12
+j=11
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N O Q S S T  U  Y
+
+we have to stop sorting after the 11th index as it is the final element in the array.
+
+THE FINAL SORTED ARRAY IS a[] = [A,E,E,I,N,O,Q,S,S,T,U,Y]
