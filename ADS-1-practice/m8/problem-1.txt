@@ -1,0 +1,65 @@
+Array to be Sorted => a[] = [E,A,S,Y,Q,U,E,S,T,I,O,N]
+sorting is done using the Selection sort
+
+STEP-1 :
+0 1 2 3 4 5 6 7 8 9 10 11
+E A S Y Q U E S T I O  N
+first, we will compare the 0th index element and find out the min element in the array.
+1st index is min so
+
+STEP-2
+0 1 2 3 4 5 6 7 8 9 10 11
+A E S Y Q U E S T I  O N
+then we will compare 1 th index element and find out the mim element in the array.
+6 index is min so
+
+STEP-3
+0 1 2 3 4 5 6 7 8 9 10 11
+A E S Y Q U E S T I  O N
+
+then we will compare 2 th index element and find out the mim element in the array.
+6 index is min so
+
+STEP-4
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E Y Q U S S T I  O N
+
+then we will compare 3 th index element and find out the mim element in the array.
+9 index is min so
+
+STEP-5
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I Q U S S T Y  O N
+
+then we will compare 4 th index element and find out the mim element in the array.
+12 index is min so
+
+STEP-6
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N U S S T Y  O Q
+then we will compare 5 th index element and find out the mim element in the array.
+11 index is min so
+
+STEP-7
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N O S S T Y  U Q
+then we will compare 6 th index element and find out the mim element in the array.
+11 index is min so
+
+STEP-8
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N O Q S T Y  U S
+then we will compare 8 th index element and find out the mim element in the array.
+11 index is min so
+
+STEP-9
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N O Q S S Y  U T
+
+then we will compare 9 th index element and find out the mim element in the array.
+11 index is min so
+
+0 1 2 3 4 5 6 7 8 9 10 11
+A E E I N O Q S S T  U  Y
+
+THE FINAL SORTED ARRAY IS a[] = [A,E,E,I,N,O,Q,S,S,T,U,Y]
