@@ -1,0 +1,20 @@
+Array to be Sorted => a[] = [E,A,S,Y,Q,U,E,S,T,I,O,N]
+sorting using the top-down mergesort.
+take a new array aux[] use it to copy elements of a[] for sorting.
+
+                        0  1  2  3  4  5  6  7  8  9  10  11
+                        E  A  S  Y  Q  U  E  S  T  I   O  N
+merge(a,aux,0,0,1)      A  E
+merge(a,aux,2,2,3)            S  Y
+merge(a,aux,0,1,3)      A  E  S  Y
+merge(a,aux,4,4,5)                  Q  U
+merge(a,aux,0,2,5)      A  E  Q  S  U  Y
+merge(a,aux,6,6,7)                        E  S
+merge(a,aux,8,8,9)                              I  T
+merge(a,aux,6,7,9)                        E  I  S  T
+merge(a,aux,10,20,11)                                  N  O
+merge(a,aux,6,8,11)                       E  I  N  O   S  T
+merge(a,aux,0,5,11)    A  E  E  I  N  O  Q  S  S  T   U   Y
+
+
+the array after using the top-down mergesort is a[] = [A,E,E,I,N,O,Q,S,S,T,U,Y].
