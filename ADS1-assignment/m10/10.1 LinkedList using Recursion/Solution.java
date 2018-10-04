@@ -1,9 +1,20 @@
 import java.util.Scanner;
-class Solution {
+/**.
+ * Class for solution.
+ */
+final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		LinkedList obj = new LinkedList();
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {
@@ -27,26 +38,72 @@ class Solution {
 		}
 	}
 }
+/**.
+ * List of linkeds.
+ */
 class LinkedList {
+	/**.
+	 * Class for node.
+	 */
 	class Node {
+		/**.
+		 * { var_description }
+		 */
 		int item;
+		/**.
+		 * { var_description }
+		 */
 		Node next;
-		Node(int item1) {
+		/**.
+		 * Constructs the object.
+		 *
+		 * @param      item1  The item 1
+		 */
+		Node(final int item1) {
 			this.item = item1;
 		}
+		/**.
+		 * Gets the item.
+		 *
+		 * @return     The item.
+		 */
 		public int getItem() {
 			return this.item;
 		}
+		/**.
+		 * Gets the next.
+		 *
+		 * @return     The next.
+		 */
 		public Node getNext() {
 			return next;
 		}
-		public void setNext(Node next1) {
+		/**.
+		 * Sets the next.
+		 *
+		 * @param      next1  The next 1
+		 */
+		public void setNext(final Node next1) {
 			this.next = next1;
 		}
 	}
+	/**.
+	 * { var_description }
+	 */
 	private int size = 0;
+	/**.
+	 * { var_description }
+	 */
 	Node head = null;
-	public void insertAt(int index, int item)throws Exception {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      index      The index
+	 * @param      item       The item
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
+	public void insertAt(final int index, final int item)throws Exception {
 		if (index > size || index < 0) {
 			throw new Exception("Can't insert at this position.");
 		}
@@ -55,7 +112,18 @@ class LinkedList {
 		size++;
 
 	}
-	private Node insertAt(Node current, Node temp, int index, int count) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      current  The current
+	 * @param      temp     The temporary
+	 * @param      index    The index
+	 * @param      count    The count
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	private Node insertAt(final Node current, final Node temp,
+	                      final int index, final int count) {
 		if (head == null) {
 			return temp;
 		}
@@ -66,13 +134,24 @@ class LinkedList {
 		current.next = insertAt(current.next, temp, index, count + 1);
 		return current;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @throws     Exception  { exception_description }
+	 */
 	public void reverse() throws Exception {
 		if (head == null) {
 			throw new Exception("No elements to reverse.");
 		}
 		reverse(head, null);
 	}
-	private void reverse(Node current, Node prev) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      current  The current
+	 * @param      prev     The previous
+	 */
+	private void reverse(final Node current, final Node prev) {
 		if (current.next == null) {
 			head = current;
 			head.next = prev;
@@ -82,30 +161,29 @@ class LinkedList {
 		current.next = prev;
 		reverse(temp, current);
 	}
-	// public void print() {
-	// 	Node obj = head;
-	// 	// if (head == null) {
-	// 	// 	System.out.println("Steque is empty.");
-	// 	// 	return;
-	// 	// }
-	// 	while (obj.getNext() != null) {
-	// 		System.out.print(obj.item + ", ");
-	// 		obj = obj.getNext();
-	// 	} System.out.print(obj.item);
-	// 	System.out.println();
-	// }
-	public void print(){
-		Node curr = head;
-		String result = "";
-		while (curr != null) {
-			if (curr.next == null) {
-				result += curr.item;
-			} else {
-				result += curr.item + ", ";
-			}
-			curr = curr.next;
-		}
-
-		System.out.println(result);
+	/**.
+	 * { function_description }
+	 */
+	public void print() {
+		Node obj = head;
+		while (obj.getNext() != null) {
+			System.out.print(obj.item + ", ");
+			obj = obj.getNext();
+		} System.out.print(obj.item);
+		System.out.println();
 	}
+	// public void print() {
+	// 	Node curr = head;
+	// 	String result = "";
+	// 	while (curr != null) {
+	// 		if (curr.next == null) {
+	// 			result += curr.item;
+	// 		} else {
+	// 			result += curr.item + ", ";
+	// 		}
+	// 		curr = curr.next;
+	// 	}
+
+	// 	System.out.println(result);
+	// }
 }
