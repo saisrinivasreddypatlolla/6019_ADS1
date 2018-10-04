@@ -48,7 +48,7 @@ class LinkedList {
 	Node head = null;
 	public void insertAt(int index, int item)throws Exception {
 		if (index > size || index < 0) {
-			throw new Exception("No elements to reverse.");
+			throw new Exception("Can't insert at this position.");
 		}
 		Node temp = new Node(item);
 		head = insertAt(head, temp, index, 0);
