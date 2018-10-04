@@ -246,6 +246,19 @@ class LinkedList {
 		obj.address = obj.getAddress().getAddress();
 		size--;
 	}
+	public void swapNodes(int item){
+		Node temp = head;
+		Node temp1 = head;
+		Node temp2 = head;
+		while(temp.getAddress().getAddress().data != item){
+			temp = temp.getAddress();
+			temp1 = temp.getAddress();
+			temp2 = temp1.getAddress();
+		}
+		temp.setAddress(temp2);
+		temp1.setAddress(temp2.address);
+		temp2.setAddress(temp1);
+	}
 	/**.
 	 * Sets the size.
 	 *
