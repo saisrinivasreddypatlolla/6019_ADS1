@@ -10,24 +10,28 @@ final class Solution {
 
 	}
 	/**.
-	 * { function_description }
+	 * main method is used to take the input and perform
+	 * operations on them.
 	 *
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
-		LinkedList obj = new LinkedList();
+		LinkedList linkedlistobj = new LinkedList();
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {
 			String[] tokens = scan.nextLine().split(" ");
 			try {
 				switch (tokens[0]) {
 				case "insertAt":
-					obj.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-					obj.print();
+					linkedlistobj.insertAt(
+					    Integer.parseInt(
+					        tokens[1]), Integer.parseInt(
+					        tokens[2]));
+					linkedlistobj.print();
 					break;
 				case "reverse":
-					obj.reverse();
-					obj.print();
+					linkedlistobj.reverse();
+					linkedlistobj.print();
 					break;
 
 				}
@@ -47,13 +51,13 @@ class LinkedList {
 	 */
 	class Node {
 		/**.
-		 * { var_description }
+		 * this variable stores the data
 		 */
-		int item;
+		private int item;
 		/**.
-		 * { var_description }
+		 * the variable stores the address of next node.
 		 */
-		Node next;
+		private Node next;
 		/**.
 		 * Constructs the object.
 		 *
@@ -63,7 +67,7 @@ class LinkedList {
 			this.item = item1;
 		}
 		/**.
-		 * Gets the item.
+		 * returns the current data.
 		 *
 		 * @return     The item.
 		 */
@@ -71,7 +75,8 @@ class LinkedList {
 			return this.item;
 		}
 		/**.
-		 * Gets the next.
+		 * returns the address of
+		 * next node.
 		 *
 		 * @return     The next.
 		 */
@@ -79,7 +84,7 @@ class LinkedList {
 			return next;
 		}
 		/**.
-		 * Sets the next.
+		 * Sets the address.
 		 *
 		 * @param      next1  The next 1
 		 */
@@ -88,15 +93,18 @@ class LinkedList {
 		}
 	}
 	/**.
-	 * { var_description }
+	 * this variable stroes the count of
+	 * elements stroed in linked list.
 	 */
 	private int size = 0;
 	/**.
-	 * { var_description }
+	 * this variable points to the first element
+	 * in linked list.
 	 */
-	Node head = null;
+	private Node head = null;
 	/**.
-	 * { function_description }
+	 * this method is to add the elements
+	 * to linkedlist 
 	 *
 	 * @param      index      The index
 	 * @param      item       The item
@@ -128,10 +136,10 @@ class LinkedList {
 			return temp;
 		}
 		if (count == index) {
-			temp.next = current;
+			temp.setNext(current);
 			return temp;
 		}
-		current.next = insertAt(current.next, temp, index, count + 1);
+		current.setNext(insertAt(current.next, temp, index, count + 1));
 		return current;
 	}
 	/**.
@@ -154,11 +162,11 @@ class LinkedList {
 	private void reverse(final Node current, final Node prev) {
 		if (current.next == null) {
 			head = current;
-			head.next = prev;
+			head.setNext(prev);
 			return;
 		}
 		Node temp = current.getNext();
-		current.next = prev;
+		current.setNext(prev);
 		reverse(temp, current);
 	}
 	/**.
@@ -172,18 +180,4 @@ class LinkedList {
 		} System.out.print(obj.item);
 		System.out.println();
 	}
-	// public void print() {
-	// 	Node curr = head;
-	// 	String result = "";
-	// 	while (curr != null) {
-	// 		if (curr.next == null) {
-	// 			result += curr.item;
-	// 		} else {
-	// 			result += curr.item + ", ";
-	// 		}
-	// 		curr = curr.next;
-	// 	}
-
-	// 	System.out.println(result);
-	// }
 }
