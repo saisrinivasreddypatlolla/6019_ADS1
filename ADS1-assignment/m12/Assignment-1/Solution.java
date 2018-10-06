@@ -1,15 +1,36 @@
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.Arrays;
+/**.
+ * Class for details.
+ */
 class Details {
-	String name;
-	String dob;
-	int sub1;
-	int sub2;
-	int sub3;
-	int tot;
-	String cat;
-	String[] dobs;
+	/**.
+	 * { var_description }
+	 */
+	private String name;
+	/**.
+	 * { var_description }
+	 */
+	private String dob;
+	/**.
+	 * { var_description }
+	 */
+	private int sub1;
+	/**.
+	 * { var_description }
+	 */
+	private int sub2;
+	/**.
+	 * { var_description }
+	 */
+	private int sub3;
+	/**.
+	 * { var_description }
+	 */
+	private int tot;
+	private String cat;
+	private String[] dobs;
 	Details() {
 
 	}
@@ -133,7 +154,7 @@ class Results {
 			System.out.println(details[i].toString());
 		}
 		int j = i;
-		while (countbc < bc && j < size){
+		while (countbc < bc && j < size) {
 			if (details[j].getCategory().equals("BC")) {
 				System.out.println(details[j].toString());
 				countbc++;
@@ -169,7 +190,7 @@ class Results {
 			}
 		}
 
-		
+
 		int k = i;
 		while (countsc < sc && k < size) {
 			if (details[k].getCategory().equals("SC")) {
@@ -188,7 +209,7 @@ class Results {
 
 			}
 		}
-		
+
 
 
 
