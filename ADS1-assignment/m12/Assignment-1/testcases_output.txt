@@ -214,7 +214,7 @@ priya,76,SC
 Ajay,76,Open
 rahul,73,Open
 ----------------------------------------
-########## Testcase 4: Failed ##########
+########## Testcase 4: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,99,Open
@@ -270,9 +270,9 @@ Raj,87,Open
 mahesh,87,Open
 riya,83,Open
 Aditya,80,Open
-Amit,76,Open
-Ajay,76,Open
 priya,76,Open
+Ajay,76,Open
+Amit,76,Open
 Arjun,75,Open
 rahul,73,Open
 Tanya,72,Open
@@ -301,9 +301,9 @@ Raj,87,Open
 mahesh,87,Open
 riya,83,Open
 Aditya,80,Open
-Amit,76,Open
-Ajay,76,Open
 priya,76,Open
+Ajay,76,Open
+Amit,76,Open
 Arjun,75,Open
 ----------------------------------------
 ########## Testcase 5: Failed ##########
@@ -382,8 +382,8 @@ vani,50,Open
 Sneha,50,SC
 Aishwarya,48,Open
 Anjali,38,SC
-Aryan,32,ST
 Manoj,32,SC
+Aryan,32,ST
 Shreya,23,SC
 
 divya,99,ST

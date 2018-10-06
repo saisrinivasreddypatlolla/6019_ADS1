@@ -46,10 +46,10 @@ class Details {
 				return -1;
 			} else {
 				if (this.sub2 < obj.sub2) {
-					return -1;
+					return 1;
 				}
 				if (this.sub2 > obj.sub2) {
-					return 1;
+					return -1;
 				} else {
 					if (this.conv[2] < obj.conv[2]) {
 						return 1;
