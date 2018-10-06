@@ -132,24 +132,7 @@ class Results {
 		for (i = 0; i < un; i++) {
 			System.out.println(details[i].toString());
 		}
-		int j = i;
-		while (countbc < bc && j < size){
-			if (details[j].getCategory().equals("BC")) {
-				System.out.println(details[j].toString());
-				countbc++;
-			}
-			j++;
-		}
-		if (countbc < bc) {
-			int m = i;
-			while (countbc < bc) {
-				System.out.println(details[m].toString());
-				countbc++;
-				m++;
-				i++;
-
-			}
-		}
+		
 		int l = i;
 		while (countst < st && l < size) {
 			if (details[l].getCategory().equals("ST")) {
@@ -184,6 +167,24 @@ class Results {
 				System.out.println(details[o].toString());
 				countsc++;
 				o++;
+				i++;
+
+			}
+		}
+		int j = i;
+		while (countbc < bc && j < size){
+			if (details[j].getCategory().equals("BC")) {
+				System.out.println(details[j].toString());
+				countbc++;
+			}
+			j++;
+		}
+		if (countbc < bc) {
+			int m = i;
+			while (countbc < bc) {
+				System.out.println(details[m].toString());
+				countbc++;
+				m++;
 				i++;
 
 			}
