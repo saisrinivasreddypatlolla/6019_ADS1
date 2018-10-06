@@ -80,10 +80,6 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:176:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:176:29: Parameter b1 should be final. [FinalParameters]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:176:41: Parameter b2 should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:177:38: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:177:39: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:177:42: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:177:43: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:181:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:181:30: Parameter a should be final. [FinalParameters]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:181:43: Parameter i should be final. [FinalParameters]
@@ -101,4 +97,4 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:223:133: '5' is a magic number. [MagicNumber]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:224:58: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 101 errors.
+Checkstyle ends with 97 errors.

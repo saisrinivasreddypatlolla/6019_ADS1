@@ -174,7 +174,7 @@ class Insertion {
 		}
 	}
 	public boolean less(Details b1, Details b2) {
-		System.out.println(b1+" "+b2);
+		// System.out.println(b1+" "+b2);
 		return b1.compareTo(b2) < 0;
 
 	}
