@@ -114,7 +114,7 @@ class Results {
 	}
 	public void sort() {
 		Insertion insobj = new Insertion();
-		insobj.sort(details);
+		insobj.sort(details, size);
 	}
 	public void resize() {
 		details = Arrays.copyOf(details, details.length + 1);
@@ -156,7 +156,7 @@ class Results {
 			}
 			k++;
 		}
-		
+
 
 
 	}
@@ -164,8 +164,8 @@ class Results {
 class Insertion {
 
 	public Insertion() {}
-	public void sort(Details[] a) {
-		for (int i = 1; i < a.length; i++) {
+	public void sort(Details[] a, int size) {
+		for (int i = 1; i < size; i++) {
 			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
 				exchange(a, j, j - 1);
 			}
@@ -174,6 +174,7 @@ class Insertion {
 		}
 	}
 	public boolean less(Details b1, Details b2) {
+		System.out.println(b1+" "+b2);
 		return b1.compareTo(b2) < 0;
 
 	}
