@@ -52,22 +52,22 @@ class Details {
 					return 1;
 				} else {
 					if (this.conv[2] < obj.conv[2]) {
-						return -1;
+						return 1;
 					}
 					if (this.conv[2] > obj.conv[2]) {
-						return 1;
+						return -1;
 					} else {
 						if (this.conv[1] < obj.conv[1]) {
-							return -1;
+							return 1;
 						}
 						if (this.conv[1] > obj.conv[1]) {
-							return 1;
+							return -1;
 						} else {
 							if (this.conv[0] < obj.conv[0]) {
-								return -1;
+								return 1;
 							}
 							if (this.conv[0] > obj.conv[0]) {
-								return 1;
+								return -1;
 							}
 						}
 					}
