@@ -133,8 +133,7 @@ class Results {
 			System.out.println(details[i].toString());
 		}
 		int j = i;
-		while (countbc < bc && j < size) {
-			// System.out.println(countbc + " " + bc);
+		while (countbc < bc && j < size){
 			if (details[i].getCategory().equals("BC")) {
 				System.out.println(details[j].toString());
 				countbc++;
@@ -152,24 +151,7 @@ class Results {
 			}
 		}
 
-		int l = i;
-		while (countst < st && l < size) {
-			if (details[l].getCategory().equals("ST")) {
-				System.out.println(details[l].toString());
-				countst++;
-			}
-			l++;
-		}
-		if (countst < st) {
-			int n = i;
-			while (countst < st) {
-				System.out.println(details[n].toString());
-				countst++;
-				n++;
-				i++;
-
-			}
-		}
+		
 		int k = i;
 		while (countsc < sc && k < size) {
 			if (details[k].getCategory().equals("SC")) {
@@ -188,6 +170,24 @@ class Results {
 
 			}
 		}
+		int l = i;
+		while (countst < st && l < size) {
+			if (details[l].getCategory().equals("ST")) {
+				System.out.println(details[l].toString());
+				countst++;
+			}
+			l++;
+		}
+		if (countst < st) {
+			int n = i;
+			while (countst < st) {
+				System.out.println(details[n].toString());
+				countst++;
+				n++;
+				i++;
+
+			}
+		}
 
 
 
@@ -201,12 +201,10 @@ class Insertion {
 			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
 				exchange(a, j, j - 1);
 			}
-			// System.out.println(Arrays.toString(a));
 
 		}
 	}
 	public boolean less(Details b1, Details b2) {
-		// System.out.println(b1+" "+b2);
 		return b1.compareTo(b2) < 0;
 
 	}
@@ -215,28 +213,6 @@ class Insertion {
 		a[i] = a[j];
 		a[j] = swap;
 	}
-
-	// public void sort(Object[] a, Comparator comparator) {
-	// 	int n = a.length;
-	// 	for (int i = 0; i < n; i++) {
-	// 		for (int j = i; j > 0 && less(a[j], a[j - 1], comparator); j--) {
-	// 			exch(a, j, j - 1);
-	// 		}
-	// 		// assert isSorted(a, 0, i, comparator);
-	// 	}
-	// 	// assert isSorted(a, comparator);
-	// }
-
-
-	// private  boolean less(Object v, Object w, Comparator comparator) {
-	// 	return comparator.compare(v, w) < 0;
-	// }
-
-	// private void exch(Object[] a, int i, int j) {
-	// 	Object swap = a[i];
-	// 	a[i] = a[j];
-	// 	a[j] = swap;
-	// }
 }
 class Solution {
 	public static void main(String[] args) {
