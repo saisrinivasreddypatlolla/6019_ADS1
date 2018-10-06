@@ -69,7 +69,6 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:119:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:122:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:127:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:154: Line has trailing spaces. [RegexpSingleline]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:196: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:198:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:198:9: Redundant 'public' modifier. [RedundantModifier]
@@ -98,4 +97,4 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:255:133: '5' is a magic number. [MagicNumber]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m12\Assignment-1\Solution.java:256:58: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 98 errors.
+Checkstyle ends with 97 errors.

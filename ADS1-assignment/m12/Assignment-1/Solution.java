@@ -134,6 +134,7 @@ class Results {
 		}
 		int j = i;
 		while (countbc < bc && j < size) {
+			// System.out.println(countbc + " " + bc);
 			if (details[i].getCategory().equals("BC")) {
 				System.out.println(details[j].toString());
 				countbc++;
@@ -141,35 +142,16 @@ class Results {
 			j++;
 		}
 		if (countbc < bc) {
-			// System.out.println(countbc);
 			int m = i;
 			while (countbc < bc) {
 				System.out.println(details[m].toString());
 				countbc++;
 				m++;
+				i++;
 
 			}
 		}
 
-		
-		int k = i;
-		while (countsc < sc && k < size) {
-			if (details[k].getCategory().equals("SC")) {
-				System.out.println(details[k].toString());
-				countsc++;
-			}
-			k++;
-		}
-		if (countsc < sc) {
-			// System.out.println(countsc);
-			int o = i;
-			while (countsc < sc) {
-				System.out.println(details[o].toString());
-				countsc++;
-				o++;
-
-			}
-		}
 		int l = i;
 		while (countst < st && l < size) {
 			if (details[l].getCategory().equals("ST")) {
@@ -179,12 +161,30 @@ class Results {
 			l++;
 		}
 		if (countst < st) {
-			// System.out.println(countst);
 			int n = i;
 			while (countst < st) {
 				System.out.println(details[n].toString());
 				countst++;
 				n++;
+				i++;
+
+			}
+		}
+		int k = i;
+		while (countsc < sc && k < size) {
+			if (details[k].getCategory().equals("SC")) {
+				System.out.println(details[k].toString());
+				countsc++;
+			}
+			k++;
+		}
+		if (countsc < sc) {
+			int o = i;
+			while (countsc < sc) {
+				System.out.println(details[o].toString());
+				countsc++;
+				o++;
+				i++;
 
 			}
 		}
