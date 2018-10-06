@@ -161,10 +161,10 @@ Aditya,80,ST
 priya,76,SC
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Insertion.less(Solution.java:152)
-	at Insertion.sort(Solution.java:144)
-	at Results.sort(Solution.java:93)
-	at Solution.main(Solution.java:200)
+	at Insertion.less(Solution.java:176)
+	at Insertion.sort(Solution.java:168)
+	at Results.sort(Solution.java:117)
+	at Solution.main(Solution.java:224)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -187,10 +187,10 @@ Ajay,76,Open
 Tanya,66,BC
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Insertion.less(Solution.java:152)
-	at Insertion.sort(Solution.java:144)
-	at Results.sort(Solution.java:93)
-	at Solution.main(Solution.java:200)
+	at Insertion.less(Solution.java:176)
+	at Insertion.sort(Solution.java:168)
+	at Results.sort(Solution.java:117)
+	at Solution.main(Solution.java:224)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -239,8 +239,8 @@ Ajay,76,Open
 Amit,76,Open
 Arjun,75,Open
 Your Output: 
-tanvi,99,Open
 Ishita,99,Open
+tanvi,99,Open
 divya,99,Open
 Deepak,98,Open
 Ira,93,Open
@@ -270,8 +270,8 @@ Aryan,32,Open
 Shreya,23,Open
 shyam,23,Open
 
-tanvi,99,Open
 Ishita,99,Open
+tanvi,99,Open
 divya,99,Open
 Deepak,98,Open
 Ira,93,Open
@@ -336,8 +336,8 @@ mahesh,87,BC
 Raj,87,BC
 riya,83,Open
 Aditya,80,ST
-Ajay,76,Open
 Amit,76,Open
+Ajay,76,Open
 Arjun,75,Open
 rahul,73,Open
 priya,72,SC

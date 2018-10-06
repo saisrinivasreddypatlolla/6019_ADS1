@@ -9,7 +9,8 @@ class Details {
 	int sub3;
 	int tot;
 	String cat;
-	Details(){
+	String[] dobs;
+	Details() {
 
 	}
 	Details(String sName, String dob1, int subOne, int subTwo,
@@ -21,6 +22,15 @@ class Details {
 		this.sub3 = subThree;
 		this.tot = total;
 		this.cat = category;
+		convertDate();
+	}
+	int[] conv;
+	public void convertDate() {
+		dobs = this.dob.split("-");
+		conv = new int[dobs.length];
+		for (int i = 0; i < dobs.length; i++) {
+			conv[i] = Integer.parseInt(dobs[i]);
+		}
 	}
 	public int compareTo(Details obj) {
 		if (this.tot < obj.tot) {
@@ -41,24 +51,38 @@ class Details {
 				if (this.sub2 > obj.sub2) {
 					return -1;
 				} else {
-					if (this.sub1 < obj.sub1) {
-						return 1;
-					}
-					if (this.sub1 > obj.sub1) {
+					if (this.conv[2] < obj.conv[2]) {
 						return -1;
 					}
+					if (this.conv[2] > obj.conv[2]) {
+						return 1;
+					} else {
+						if (this.conv[1] < obj.conv[1]) {
+							return -1;
+						}
+						if (this.conv[1] > obj.conv[1]) {
+							return 1;
+						} else {
+							if (this.conv[0] < obj.conv[0]) {
+								return -1;
+							}
+							if (this.conv[0] > obj.conv[0]) {
+								return 1;
+							}
+						}
+					}
+					return 0;
 				}
-			}
-			return 0;
-		}
 
+			}
+		}
 	}
 	public String toString() {
 		String str;
-		str = this.name+","+this.tot+","+this.cat;
+		str = this.name + "," + this.tot + "," + this.cat;
 		return str;
 	}
-	public String getCategory(){
+	public String getCategory() {
 		return this.cat;
 	}
 }
@@ -88,52 +112,52 @@ class Results {
 		}
 		details[size++] = obj;
 	}
-	public void sort(){
+	public void sort() {
 		Insertion insobj = new Insertion();
 		insobj.sort(details);
 	}
 	public void resize() {
 		details = Arrays.copyOf(details, details.length + 1);
 	}
-	public void print(){
-		for(int i = 0;i<size;i++){
+	public void print() {
+		for (int i = 0; i < size; i++) {
 			System.out.println(details[i].toString());
 		}
 	}
-	public void allotment(){
+	public void allotment() {
 		int i;
-		int countbc =0;
+		int countbc = 0;
 		int countsc = 0;
 		int countst = 0;
-		for(i = 0;i<un;i++){
+		for (i = 0; i < un; i++) {
 			System.out.println(details[i].toString());
 		}
 		int l = i;
-		while(countst<st&&l<size){
-			if(details[l].getCategory().equals("ST")){
+		while (countst < st && l < size) {
+			if (details[l].getCategory().equals("ST")) {
 				System.out.println(details[l].toString());
 				countst++;
 			}
 			l++;
 		}
 		int k = i;
-		while(countsc<sc&&k<size){
-			if(details[k].getCategory().equals("SC")){
+		while (countsc < sc && k < size) {
+			if (details[k].getCategory().equals("SC")) {
 				System.out.println(details[k].toString());
 				countsc++;
 			}
 			k++;
 		}
 		int j = i;
-		while(countbc<bc&&j<size){
-			if(details[i].getCategory().equals("BC")){
+		while (countbc < bc && j < size) {
+			if (details[i].getCategory().equals("BC")) {
 				System.out.println(details[j].toString());
 				countbc++;
 			}
 			j++;
 		}
-		
-		
+
+
 	}
 }
 class Insertion {
