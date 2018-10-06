@@ -134,7 +134,7 @@ class Results {
 		}
 		int j = i;
 		while (countbc < bc && j < size){
-			if (details[i].getCategory().equals("BC")) {
+			if (details[j].getCategory().equals("BC")) {
 				System.out.println(details[j].toString());
 				countbc++;
 			}
