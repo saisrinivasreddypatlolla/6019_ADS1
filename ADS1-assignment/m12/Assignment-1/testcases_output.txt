@@ -62,7 +62,7 @@ tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 divya,99,ST
 Ishita,99,Open
@@ -140,9 +140,9 @@ Ishita,99,Open
 Deepak,98,Open
 Ira,93,ST
 tanvi,90,BC
+Raj,87,BC
 Aditya,80,ST
 priya,72,SC
-Raj,87,BC
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -162,10 +162,10 @@ Aditya,80,ST
 priya,76,SC
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Insertion.less(Solution.java:176)
-	at Insertion.sort(Solution.java:168)
+	at Insertion.less(Solution.java:177)
+	at Insertion.sort(Solution.java:169)
 	at Results.sort(Solution.java:117)
-	at Solution.main(Solution.java:224)
+	at Solution.main(Solution.java:225)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -188,10 +188,10 @@ Ajay,76,Open
 Tanya,66,BC
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
-	at Insertion.less(Solution.java:176)
-	at Insertion.sort(Solution.java:168)
+	at Insertion.less(Solution.java:177)
+	at Insertion.sort(Solution.java:169)
 	at Results.sort(Solution.java:117)
-	at Solution.main(Solution.java:224)
+	at Solution.main(Solution.java:225)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
