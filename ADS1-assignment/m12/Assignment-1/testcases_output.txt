@@ -211,7 +211,6 @@ divya,99,Open
 tanvi,90,ST
 Aditya,80,Open
 priya,76,SC
-0
 priya,76,SC
 priya,76,SC
 ----------------------------------------
@@ -302,10 +301,8 @@ Raj,87,Open
 mahesh,87,Open
 riya,83,Open
 Aditya,80,Open
-0
 riya,83,Open
 Aditya,80,Open
-0
 riya,83,Open
 Aditya,80,Open
 ----------------------------------------

@@ -160,7 +160,7 @@ class Results {
 			l++;
 		}
 		if (countst < st) {
-			System.out.println(countst);
+			// System.out.println(countst);
 			int n = i;
 			while (countst < st) {
 				System.out.println(details[n].toString());
@@ -178,7 +178,7 @@ class Results {
 			k++;
 		}
 		if (countsc < sc) {
-			System.out.println(countsc);
+			// System.out.println(countsc);
 			int o = i;
 			while (countsc < sc) {
 				System.out.println(details[o].toString());
