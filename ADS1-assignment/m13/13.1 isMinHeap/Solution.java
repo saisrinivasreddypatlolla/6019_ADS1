@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Comparable;
 /**
  * Class for minimum heap.
  *
@@ -55,7 +54,7 @@ final class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String type = scan.nextLine();
 		switch (type) {
@@ -64,7 +63,7 @@ final class Solution {
 			int lines = Integer.parseInt(scan.nextLine());
 			for (int i = 0; i < lines; i++) {
 				String item = scan.nextLine();
-				if(item.length()==0){
+				if (item.length() == 0) {
 					System.out.println("false");
 					break;
 				}
@@ -81,14 +80,16 @@ final class Solution {
 			lines = Integer.parseInt(scan.nextLine());
 			for (int i = 0; i < lines; i++) {
 				String item = scan.nextLine();
-				if(item.length()==0){
+				if (item.length() == 0) {
 					System.out.println("false");
 					break;
 				}
 				String[] input = item.split(",");
-				Integer[] values = new Integer[input.length + 1];
+				Integer[] values = new Integer[
+				    input.length + 1];
 				for (int j = 0; j < input.length; j++) {
-					values[j + 1] = Integer.parseInt(input[j]);
+					values[j + 1] = Integer.parseInt(
+					                    input[j]);
 				}
 				System.out.println(integerObj.check(values));
 			}
@@ -98,14 +99,15 @@ final class Solution {
 			lines = Integer.parseInt(scan.nextLine());
 			for (int i = 0; i < lines; i++) {
 				String item = scan.nextLine();
-				if(item.length()==0){
+				if (item.length() == 0) {
 					System.out.println("false");
 					break;
 				}
 				String[] input = item.split(",");
 				Double[] values = new Double[input.length + 1];
 				for (int j = 0; j < input.length; j++) {
-					values[j + 1] = Double.parseDouble(input[j]);
+					values[j + 1] = Double.parseDouble(
+					                    input[j]);
 				}
 				System.out.println(doubleObj.check(values));
 			}
@@ -115,17 +117,20 @@ final class Solution {
 			lines = Integer.parseInt(scan.nextLine());
 			for (int i = 0; i < lines; i++) {
 				String item = scan.nextLine();
-				if(item.length()==0){
+				if (item.length() == 0) {
 					System.out.println("false");
 					break;
 				}
 				String[] input = item.split(",");
 				Float[] values = new Float[input.length + 1];
 				for (int k = 0; k < input.length; k++) {
-					values[k + 1] = Float.parseFloat(input[k]);
+					values[k + 1] = Float.parseFloat(
+					                    input[k]);
 				}
 				System.out.println(floatObj.check(values));
 			}
+			break;
+		default:
 			break;
 		}
 	}
