@@ -55,9 +55,7 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:165:29: Parameter obj should be final. [FinalParameters]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:289:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:289:9: Variable 'temp' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:290:12: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:290:15: Variable 'result' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:292:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:291:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:337: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:339:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:339:5: Redundant 'public' modifier. [RedundantModifier]
@@ -85,4 +83,4 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:373:79: '5' is a magic number. [MagicNumber]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:373:91: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 85 errors.
+Checkstyle ends with 83 errors.
