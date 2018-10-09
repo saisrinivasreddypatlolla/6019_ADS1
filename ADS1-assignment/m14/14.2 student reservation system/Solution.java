@@ -287,10 +287,11 @@ class Results {
 
     // }
     int temp;
+    Details[] result;
 
     public void vacancies() {
-    Details[] result = new Details[vac];
         temp = 0;
+        result = new Details[vac];
         for (int i = 0; i < un; i++) {
             result[temp++] = details[i];
             vac--;
