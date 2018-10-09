@@ -136,20 +136,20 @@ class Results {
         }
         details[size++] = obj;
     }
-    public void delete(Details obj){
-        if(size==0){
-            return;
-        }
-        for(int i = 0;i<size-1;i++){
-            if(details[i].getName().equals(obj.getName())){
-                while(i<size){
-                    details[i] = details[i+1];
-                    i++;
-                }
-                size--;
-            }
-        }
-    }
+    // public void delete(Details obj){
+    //     if(size==0){
+    //         return;
+    //     }
+    //     for(int i = 0;i<size-1;i++){
+    //         if(details[i].getName().equals(obj.getName())){
+    //             while(i<size){
+    //                 details[i] = details[i+1];
+    //                 i++;
+    //             }
+    //             size--;
+    //         }
+    //     }
+    // }
     public void sort() {
         Insertion insobj = new Insertion();
         insobj.sort(details, size);
@@ -169,14 +169,14 @@ class Results {
         int countst = 0;
         for (i = 0; i < un; i++) {
             System.out.println(details[i].toString());
-            delete(details[i]);
+            // delete(details[i]);
         }
         int j = i;
         while (countbc < bc && j < size) {
             if (details[j].getCategory().equals("BC")) {
                 System.out.println(details[j].toString());
                 countbc++;
-                delete(details[j]);
+                // delete(details[j]);
 
             }
             j++;
@@ -187,7 +187,7 @@ class Results {
             if (details[l].getCategory().equals("ST")) {
                 System.out.println(details[l].toString());
                 countst++;
-                delete(details[l]);
+                // delete(details[l]);
 
             }
             l++;
@@ -200,7 +200,7 @@ class Results {
             if (details[k].getCategory().equals("SC")) {
                 System.out.println(details[k].toString());
                 countsc++;
-                delete(details[k]);
+                // delete(details[k]);
 
             }
             k++;
