@@ -40,7 +40,7 @@ class Solution {
 		MedianFinding obj = new MedianFinding();
 		int lines = Integer.parseInt(scan.nextLine());
 		Double value = Double.parseDouble(scan.nextLine());
-		Double median = (Double) value;
+		Double median = value;
 		obj.minInsert(value);
 		System.out.println(median);
 		for(int i = 1;i<lines;i++){
@@ -58,10 +58,10 @@ class Solution {
 			}
 			if(Math.abs(obj.getMaxSize()-obj.getMinSize())==1){
 				if(obj.getMinSize()>obj.getMinSize()){
-					median = (Double) obj.getMin();
+					median = obj.getMin();
 					System.out.println(median);
 				} else{
-					median = (Double) obj.getMax();
+					median = obj.getMax();
 					System.out.println(median);
 				}
 			}
