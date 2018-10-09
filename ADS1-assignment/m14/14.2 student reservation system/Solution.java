@@ -106,7 +106,7 @@ class Details {
     public String getCategory() {
         return this.cat;
     }
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 }
@@ -149,9 +149,9 @@ class Results {
     //             size--;
     //         }
     //     }
+    Insertion insobj = new Insertion();
     // }
     public void sort() {
-        Insertion insobj = new Insertion();
         insobj.sort(details, size);
     }
     public void resize() {
@@ -163,42 +163,49 @@ class Results {
         }
     }
     public void allotment() {
+        Details[] temp = new Details[vac];
+        int tempSize = 0;
         int i;
         int countbc = 0;
         int countsc = 0;
         int countst = 0;
         for (i = 0; i < un; i++) {
-            System.out.println(details[i].toString());
+            // System.out.println(details[i].toString());
+            temp[tempSize++] = details[i];
             // delete(details[i]);
         }
         int j = i;
         while (countbc < bc && j < size) {
             if (details[j].getCategory().equals("BC")) {
-                System.out.println(details[j].toString());
+                // System.out.println(details[j].toString());
+                temp[tempSize++] = details[j];
                 countbc++;
                 // delete(details[j]);
 
             }
             j++;
         }
-        
+
         int l = i;
         while (countst < st && l < size) {
             if (details[l].getCategory().equals("ST")) {
-                System.out.println(details[l].toString());
+                // System.out.println(details[l].toString());
+                temp[tempSize++] = details[l];
+
                 countst++;
                 // delete(details[l]);
 
             }
             l++;
         }
-        
+
 
 
         int k = i;
         while (countsc < sc && k < size) {
             if (details[k].getCategory().equals("SC")) {
-                System.out.println(details[k].toString());
+                temp[tempSize++] = details[k];
+                // System.out.println(details[k].toString());
                 countsc++;
                 // delete(details[k]);
 
@@ -208,7 +215,8 @@ class Results {
         if (countbc < bc) {
             int m = i;
             while (countbc < bc) {
-                System.out.println(details[m].toString());
+                temp[tempSize++] = details[m];
+                // System.out.println(details[m].toString());
                 countbc++;
                 m++;
                 i++;
@@ -218,7 +226,8 @@ class Results {
         if (countst < st) {
             int n = i;
             while (countst < st) {
-                System.out.println(details[n].toString());
+                // System.out.println(details[n].toString());
+                temp[tempSize++] = details[n];
                 countst++;
                 n++;
                 i++;
@@ -228,12 +237,17 @@ class Results {
         if (countsc < sc) {
             int o = i;
             while (countsc < sc) {
-                System.out.println(details[o].toString());
+                // System.out.println(details[o].toString());
+                temp[tempSize++] = details[o];
                 countsc++;
                 o++;
                 i++;
 
             }
+        }
+        insobj.sort(temp, tempSize);
+        for(int a =0;a<tempSize;a++){
+            System.out.println(temp[a].toString());
         }
 
 
@@ -276,8 +290,8 @@ class Solution {
         for (int i = 0; i < N; i++) {
             String[] tokens = scan.nextLine().split(",");
             resultObj.add(new Details(tokens[0], tokens[1], Integer.parseInt(
-                tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(
-                tokens[4]), Integer.parseInt(tokens[5]), tokens[6]));
+                                          tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(
+                                          tokens[4]), Integer.parseInt(tokens[5]), tokens[6]));
         }
         resultObj.sort();
         resultObj.print();
