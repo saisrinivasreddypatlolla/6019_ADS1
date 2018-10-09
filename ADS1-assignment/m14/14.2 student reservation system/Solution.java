@@ -68,9 +68,9 @@ class CategoryCriteria {
         //Unused.
     }
     /**
-     * { Object for Merge Class }.
+     * { Object for Insertion Class }.
      */
-    private Merge mergee = new Merge();
+    private Insertion mergee = new Insertion();
     /**
      * { No.of applied }.
      */
@@ -214,7 +214,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int studcount = Integer.parseInt(scan.nextLine());
-        Merge sort = new Merge();
+        Insertion sort = new Insertion();
         int vacancies = Integer.parseInt(scan.nextLine());
         int unrevacancies = Integer.parseInt(scan.nextLine());
         int bcvacancies = Integer.parseInt(scan.nextLine());
@@ -242,13 +242,13 @@ public final class Solution {
     }
 }
 /**
- * Class for merge.
+ * Class for Insertion.
  */
-class Merge {
+class Insertion {
     /**
      * Constructs the object.
      */
-    Merge() {
+    Insertion() {
     }
 
     /**
@@ -263,9 +263,11 @@ class Merge {
      */
     public void insertionSort(final StudentInfo[] a, final int lo,
                               final int hi, final Comparator comparator) {
-        for (int i = lo; i <= hi; i++)
-            for (int j = i; j > lo && less(a[j], a[j - 1], comparator); j--)
+        for (int i = lo; i <= hi; i++) {
+            for (int j = i; j > lo && less(a[j], a[j - 1], comparator); j--) {
                 exch(a, j, j - 1);
+            }
+        }
     }
 
     /**
@@ -295,15 +297,16 @@ class Merge {
                          final Comparator comp) {
         return comp.compare(a, b) < 0;
     }
-    /**
+    /**.
      * { Print to print the Output }
      *
      * @param      items  The items
      */
     public void print(final StudentInfo[] items) {
         for (int i = 0; i < items.length; i++) {
-            System.out.println(items[i].getName() + "," +
-                               items[i].getMarks() + "," + items[i].getCategory());
+            System.out.println(items[i].getName() + ","
+                               + items[i].getMarks() + ","
+                               + items[i].getCategory());
         }
     }
 }
@@ -356,7 +359,8 @@ class StudentInfo {
      * @param      cat       The cat
      */
     StudentInfo(final String n, final String b, final int s1,
-                final int s2, final int s3, final int totmarks, final String cat) {
+                final int s2, final int s3, final int totmarks,
+                final String cat) {
         name = n;
         String[] dupdob = b.split("-");
         dob = new int[dupdob.length];
