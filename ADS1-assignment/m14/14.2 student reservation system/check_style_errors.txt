@@ -1,5 +1,5 @@
 Starting audit...
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:407:36: Variable 'comp' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\StudentInfo.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\StudentInfo.java:96:36: Variable 'comp' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
 Checkstyle ends with 2 errors.
