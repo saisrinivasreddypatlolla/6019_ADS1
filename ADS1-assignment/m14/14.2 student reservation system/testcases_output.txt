@@ -1,4 +1,4 @@
-########## Testcase 0: Passed ##########
+########## Testcase 0: Failed ##########
 Expected Output: 
 divya,99,ST
 Deepak,98,Open
@@ -56,13 +56,12 @@ Aryan,32,ST
 Shreya,23,SC
 
 divya,99,ST
-Deepak,98,Open
-Ira,93,ST
-tanvi,90,BC
-Aditya,80,ST
-priya,72,SC
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 23
+	at Results.delete(Solution.java:146)
+	at Results.allotment(Solution.java:172)
+	at Solution.main(Solution.java:285)
 ----------------------------------------
-########## Testcase 1: Passed ##########
+########## Testcase 1: Failed ##########
 Expected Output: 
 divya,99,ST
 Ishita,99,Open
@@ -136,13 +135,10 @@ Aryan,32,ST
 Shreya,23,SC
 
 divya,99,ST
-Ishita,99,Open
-Deepak,98,Open
-Ira,93,ST
-tanvi,90,BC
-Raj,87,BC
-Aditya,80,ST
-priya,72,SC
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
+	at Results.delete(Solution.java:146)
+	at Results.allotment(Solution.java:172)
+	at Solution.main(Solution.java:285)
 ----------------------------------------
 ########## Testcase 2: Passed ##########
 Expected Output: 
@@ -208,13 +204,13 @@ Tanya,66,BC
 Abhishek,60,BC
 
 divya,99,Open
-tanvi,90,ST
 Aditya,80,Open
+Ajay,76,Open
 Tanya,66,BC
-priya,76,SC
-priya,76,SC
+Amit,70,Open
+Priyanka,70,Open
 ----------------------------------------
-########## Testcase 4: Passed ##########
+########## Testcase 4: Failed ##########
 Expected Output: 
 divya,99,Open
 tanvi,99,Open
@@ -293,18 +289,10 @@ shyam,23,Open
 Shreya,23,Open
 
 divya,99,Open
-tanvi,99,Open
-Ishita,99,Open
-Deepak,98,Open
-Ira,93,Open
-Raj,87,Open
-mahesh,87,Open
-riya,83,Open
-Aditya,80,Open
-priya,76,Open
-Ajay,76,Open
-Amit,76,Open
-Arjun,75,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
+	at Results.delete(Solution.java:146)
+	at Results.allotment(Solution.java:172)
+	at Solution.main(Solution.java:285)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -387,18 +375,8 @@ Aryan,32,ST
 Shreya,23,SC
 
 divya,99,ST
-Deepak,99,Open
-Ishita,99,Open
-Ira,93,ST
-tanvi,90,BC
-Raj,87,BC
-mahesh,87,BC
-riya,83,Open
-varsha,66,BC
-Aditya,80,ST
-priya,72,SC
-Aditya,80,ST
-Ajay,76,Open
-Amit,76,Open
-Arjun,75,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 30
+	at Results.delete(Solution.java:146)
+	at Results.allotment(Solution.java:172)
+	at Solution.main(Solution.java:285)
 ----------------------------------------
