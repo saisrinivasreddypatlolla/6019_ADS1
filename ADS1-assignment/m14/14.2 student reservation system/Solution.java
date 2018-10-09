@@ -162,6 +162,14 @@ class Results {
             System.out.println(details[i].toString());
         }
     }
+    public boolean contains(Details obj) {
+        for (int i = 0; i < size; i++) {
+            if (obj.getName().equals(details[i].getName())) {
+                return false;
+            }
+        }
+        return true;
+    }
     public void allotment() {
         Details[] temp = new Details[vac];
         int tempSize = 0;
@@ -178,7 +186,9 @@ class Results {
         while (countbc < bc && j < size) {
             if (details[j].getCategory().equals("BC")) {
                 // System.out.println(details[j].toString());
-                temp[tempSize++] = details[j];
+                if (contains(details[j])) {
+                    temp[tempSize++] = details[j];
+                }
                 countbc++;
                 // delete(details[j]);
 
@@ -190,7 +200,9 @@ class Results {
         while (countst < st && l < size) {
             if (details[l].getCategory().equals("ST")) {
                 // System.out.println(details[l].toString());
-                temp[tempSize++] = details[l];
+                if (contains(details[l])) {
+                    temp[tempSize++] = details[l];
+                }
 
                 countst++;
                 // delete(details[l]);
@@ -204,7 +216,9 @@ class Results {
         int k = i;
         while (countsc < sc && k < size) {
             if (details[k].getCategory().equals("SC")) {
-                temp[tempSize++] = details[k];
+                if (contains(details[k])) {
+                    temp[tempSize++] = details[k];
+                }
                 // System.out.println(details[k].toString());
                 countsc++;
                 // delete(details[k]);
@@ -215,7 +229,9 @@ class Results {
         if (countbc < bc) {
             int m = i;
             while (countbc < bc) {
-                temp[tempSize++] = details[m];
+                if (contains(details[m])) {
+                    temp[tempSize++] = details[m];
+                }
                 // System.out.println(details[m].toString());
                 countbc++;
                 m++;
@@ -227,7 +243,9 @@ class Results {
             int n = i;
             while (countst < st) {
                 // System.out.println(details[n].toString());
-                temp[tempSize++] = details[n];
+                if (contains(details[n])) {
+                    temp[tempSize++] = details[n];
+                }
                 countst++;
                 n++;
                 i++;
@@ -238,7 +256,9 @@ class Results {
             int o = i;
             while (countsc < sc) {
                 // System.out.println(details[o].toString());
-                temp[tempSize++] = details[o];
+                if (contains(details[o])) {
+                    temp[tempSize++] = details[o];
+                }
                 countsc++;
                 o++;
                 i++;
@@ -246,7 +266,7 @@ class Results {
             }
         }
         insobj.sort(temp, tempSize);
-        for(int a =0;a<tempSize;a++){
+        for (int a = 0; a < tempSize; a++) {
             System.out.println(temp[a].toString());
         }
 
