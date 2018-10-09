@@ -58,8 +58,10 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:23: ';' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:24: '<' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:25: '<' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:30: ';' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:34: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:29: '-' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:30: '-' is not followed by whitespace. [WhitespaceAround]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:32: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:143:36: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:144:15: 'if' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:144:59: '{' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:145:22: 'while' is not followed by whitespace. [WhitespaceAround]
@@ -99,4 +101,4 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:280:53: '5' is a magic number. [MagicNumber]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:280:65: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 99 errors.
+Checkstyle ends with 101 errors.

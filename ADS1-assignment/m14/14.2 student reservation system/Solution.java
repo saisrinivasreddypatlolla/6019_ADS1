@@ -140,7 +140,7 @@ class Results {
         if(size==0){
             return;
         }
-        for(int i = 0;i<size;i++){
+        for(int i = 0;i<size-1;i++){
             if(details[i].getName().equals(obj.getName())){
                 while(i<size){
                     details[i] = details[i+1];
