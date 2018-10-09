@@ -123,7 +123,8 @@ class CategoryCriteria {
      * @param      sorted  The sorted
      */
     CategoryCriteria(final int app, final int vac, final int urev,
-        final int bv, final int sv, final int stv, final StudentInfo[] sorted) {
+                     final int bv, final int sv, final int stv,
+                     final StudentInfo[] sorted) {
         applied = app;
         vacancies = vac;
         urevacancies = urev;
@@ -167,11 +168,11 @@ class CategoryCriteria {
                     catSorted[asize++] = dupSorted[i];
                     bcvac--;
                 } else if (dupSorted[i].getCategory().equals("SC")
-                    && scvac > 0) {
+                           && scvac > 0) {
                     catSorted[asize++] = dupSorted[i];
                     scvac--;
                 } else if (dupSorted[i].getCategory().equals("ST")
-                    && stvac > 0) {
+                           && stvac > 0) {
                     catSorted[asize++] = dupSorted[i];
                     stvac--;
                 }
@@ -224,11 +225,11 @@ public final class Solution {
         for (int i = 0; i < studcount; i++) {
             sinfo = scan.nextLine().split(",");
             stobj.add(new StudentInfo(sinfo[0], sinfo[1],
-                Integer.parseInt(sinfo[2]),
-                Integer.parseInt(sinfo[2 + 1]),
-                Integer.parseInt(sinfo[2 + 2]),
-                Integer.parseInt(sinfo[2 + 2 + 1]),
-                (sinfo[2 + 2 + 2])));
+                                      Integer.parseInt(sinfo[2]),
+                                      Integer.parseInt(sinfo[2 + 1]),
+                                      Integer.parseInt(sinfo[2 + 2]),
+                                      Integer.parseInt(sinfo[2 + 2 + 1]),
+                                      (sinfo[2 + 2 + 2])));
         }
         StudentInfo[] stinfo = stobj.getInfo();
         sort.insertionSort(stinfo, 0, stinfo.length - 1, StudentInfo.comp);
@@ -260,10 +261,11 @@ class Merge {
      * @param      hi          The higher
      * @param      comparator  The comparator
      */
-    public void insertionSort(StudentInfo[] a, int lo, int hi, Comparator comparator) {
+    public void insertionSort(final StudentInfo[] a, final int lo,
+                              final int hi, final Comparator comparator) {
         for (int i = lo; i <= hi; i++)
-            for (int j = i; j > lo && less(a[j], a[j-1], comparator); j--)
-                exch(a, j, j-1);
+            for (int j = i; j > lo && less(a[j], a[j - 1], comparator); j--)
+                exch(a, j, j - 1);
     }
 
     /**
@@ -273,7 +275,8 @@ class Merge {
      * @param      i     { index i }
      * @param      j     { index j }
      */
-    private  void exch(StudentInfo[] a, int i, int j) {
+    private  void exch(final StudentInfo[] a, final int i,
+                       final int j) {
         StudentInfo swap = a[i];
         a[i] = a[j];
         a[j] = swap;
@@ -288,7 +291,8 @@ class Merge {
      *
      * @return     { Returns boolean }
      */
-    private boolean less(StudentInfo a, StudentInfo b, Comparator comp) {
+    private boolean less(final StudentInfo a, final StudentInfo b,
+                         final Comparator comp) {
         return comp.compare(a, b) < 0;
     }
     /**
@@ -296,9 +300,10 @@ class Merge {
      *
      * @param      items  The items
      */
-    public void print(StudentInfo[] items) {
+    public void print(final StudentInfo[] items) {
         for (int i = 0; i < items.length; i++) {
-            System.out.println(items[i].getName() + "," + items[i].getMarks() + "," + items[i].getCategory());
+            System.out.println(items[i].getName() + "," +
+                               items[i].getMarks() + "," + items[i].getCategory());
         }
     }
 }
@@ -351,7 +356,7 @@ class StudentInfo {
      * @param      cat       The cat
      */
     StudentInfo(final String n, final String b, final int s1,
-        final int s2, final int s3, final int totmarks, final String cat) {
+                final int s2, final int s3, final int totmarks, final String cat) {
         name = n;
         String[] dupdob = b.split("-");
         dob = new int[dupdob.length];
@@ -409,7 +414,7 @@ class StudentInfo {
                 } else {
                     int count = 2 * 2 * (2 + 1);
                     return (((count - s1.dob[1]) * DAYS)
-                        - ((count - s2.dob[1]) * DAYS));
+                            - ((count - s2.dob[1]) * DAYS));
                 }
             }
         }
