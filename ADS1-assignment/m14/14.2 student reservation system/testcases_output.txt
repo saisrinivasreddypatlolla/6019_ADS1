@@ -55,10 +55,9 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-divya,99,ST
-Deepak,98,Open
-Ira,93,ST
-tanvi,90,BC
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -133,11 +132,9 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-divya,99,ST
-Ishita,99,Open
-Deepak,98,Open
-Ira,93,ST
-tanvi,90,BC
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -167,7 +164,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-divya,99,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -200,9 +199,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-divya,99,Open
-tanvi,90,ST
-Aditya,80,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -282,13 +281,9 @@ Aryan,32,Open
 shyam,23,Open
 Shreya,23,Open
 
-divya,99,Open
-tanvi,99,Open
-Ishita,99,Open
-Deepak,98,Open
-Ira,93,Open
-Raj,87,Open
-mahesh,87,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -370,12 +365,7 @@ Manoj,32,SC
 Aryan,32,ST
 Shreya,23,SC
 
-divya,99,ST
-Deepak,99,Open
-Ishita,99,Open
-Ira,93,ST
-tanvi,90,BC
-Raj,87,BC
-mahesh,87,BC
-riya,83,Open
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at Results.vacancies(Solution.java:295)
+	at Solution.main(Solution.java:378)
 ----------------------------------------

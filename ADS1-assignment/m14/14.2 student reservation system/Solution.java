@@ -287,9 +287,10 @@ class Results {
 
     // }
     int temp;
+    Details[] result = new Details[vac];
+
     public void vacancies() {
         temp = 0;
-        Details[] result = new Details[vac];
         for (int i = 0; i < un; i++) {
             result[temp++] = details[i];
             vac--;
@@ -327,7 +328,7 @@ class Results {
             }
         }
         insobj.sort(result, temp);
-        for(int i =0;i<temp;i++){
+        for (int i = 0; i < temp; i++) {
             System.out.println(result[i].toString());
         }
     }
