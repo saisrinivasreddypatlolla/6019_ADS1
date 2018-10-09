@@ -57,7 +57,7 @@ class Solution {
 				obj.minInsert(obj.delMax());
 			}
 			if(Math.abs(obj.getMaxSize()-obj.getMinSize())==1){
-				if(obj.getMinSize()>obj.getMinSize()){
+				if(obj.getMinSize()>obj.getMaxSize()){
 					median = obj.getMin();
 					System.out.println(median);
 				} else{
