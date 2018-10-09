@@ -186,9 +186,9 @@ class Results {
         while (countbc < bc && j < size) {
             if (details[j].getCategory().equals("BC")) {
                 // System.out.println(details[j].toString());
-                if (!(contains(details[j]))) {
+                // if (!(contains(details[j]))) {
                     temp[tempSize++] = details[j];
-                }
+                
                 countbc++;
                 // delete(details[j]);
 
@@ -200,9 +200,9 @@ class Results {
         while (countst < st && l < size) {
             if (details[l].getCategory().equals("ST")) {
                 // System.out.println(details[l].toString());
-                if (!(contains(details[l]))) {
+                // if (!(contains(details[l]))) {
                     temp[tempSize++] = details[l];
-                }
+                
 
                 countst++;
                 // delete(details[l]);
@@ -216,9 +216,9 @@ class Results {
         int k = i;
         while (countsc < sc && k < size) {
             if (details[k].getCategory().equals("SC")) {
-                if (!(contains(details[k]))) {
+                // if (!(contains(details[k]))) {
                     temp[tempSize++] = details[k];
-                }
+                
                 // System.out.println(details[k].toString());
                 countsc++;
                 // delete(details[k]);

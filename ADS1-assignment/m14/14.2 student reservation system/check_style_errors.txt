@@ -54,6 +54,9 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:165:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:165:29: Parameter obj should be final. [FinalParameters]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:173:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:191: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:205: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:221: Line has trailing spaces. [RegexpSingleline]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:278: Missing a Javadoc comment. [JavadocType]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:280:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:280:5: Redundant 'public' modifier. [RedundantModifier]
@@ -81,4 +84,4 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:314:79: '5' is a magic number. [MagicNumber]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m14\14.2 student reservation system\Solution.java:314:91: '6' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 81 errors.
+Checkstyle ends with 84 errors.
