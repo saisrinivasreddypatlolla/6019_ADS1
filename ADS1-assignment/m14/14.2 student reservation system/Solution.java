@@ -170,111 +170,169 @@ class Results {
         }
         return false;
     }
-    public void allotment() {
-        Details[] temp = new Details[vac];
-        int tempSize = 0;
-        int i;
-        int countbc = 0;
-        int countsc = 0;
-        int countst = 0;
-        for (i = 0; i < un; i++) {
-            // System.out.println(details[i].toString());
-            temp[tempSize++] = details[i];
-            // delete(details[i]);
+    // public void allotment() {
+    //     Details[] temp = new Details[vac];
+    //     int tempSize = 0;
+    //     int i;
+    //     int countbc = 0;
+    //     int countsc = 0;
+    //     int countst = 0;
+    //     for (i = 0; i < un; i++) {
+    //         // System.out.println(details[i].toString());
+    //         temp[tempSize++] = details[i];
+    //         // delete(details[i]);
+    //     }
+    //     int j = i;
+    //     while (countbc < bc && j < size) {
+    //         if (details[j].getCategory().equals("BC")) {
+    //             // System.out.println(details[j].toString());
+    //             // if (!(contains(details[j]))) {
+    //                 temp[tempSize++] = details[j];
+
+    //             countbc++;
+    //             // delete(details[j]);
+
+    //         }
+    //         j++;
+    //     }
+
+    //     int l = i;
+    //     while (countst < st && l < size) {
+    //         if (details[l].getCategory().equals("ST")) {
+    //             // System.out.println(details[l].toString());
+    //             // if (!(contains(details[l]))) {
+    //                 temp[tempSize++] = details[l];
+
+
+    //             countst++;
+    //             // delete(details[l]);
+
+    //         }
+    //         l++;
+    //     }
+
+
+
+    //     int k = i;
+    //     while (countsc < sc && k < size) {
+    //         if (details[k].getCategory().equals("SC")) {
+    //             // if (!(contains(details[k]))) {
+    //                 temp[tempSize++] = details[k];
+
+    //             // System.out.println(details[k].toString());
+    //             countsc++;
+    //             // delete(details[k]);
+
+    //         }
+    //         k++;
+    //     }
+    //     int reserved = bcSeats + scSeats + stSeats;
+    //     for (int i = 0; i < details.size(); i++) {
+    //         if (reserved > 0) {
+    //             if (alloted.contains(details.get(i))) {
+    //                 int sum = 0;
+    //             } else {
+    //             alloted.add(details.get(i));
+    //             reserved--;
+    //             }
+    //         }
+    //     }
+    //     sorting(alloted);
+    //     if (countbc < bc) {
+    //         int m = i;
+    //         while (countbc < bc) {
+    //             if (!(contains(details[m]))) {
+    //                 temp[tempSize++] = details[m];
+    //             }
+    //             // System.out.println(details[m].toString());
+    //             countbc++;
+    //             m++;
+    //             i++;
+
+    //         }
+    //     }
+    //     if (countst < st) {
+    //         int n = i;
+    //         while (countst < st) {
+    //             // System.out.println(details[n].toString());
+    //             if (!(contains(details[n]))) {
+    //                 temp[tempSize++] = details[n];
+    //             }
+    //             countst++;
+    //             n++;
+    //             i++;
+
+    //         }
+    //     }
+    //     if (countsc < sc) {
+    //         int o = i;
+    //         while (countsc < sc) {
+    //             // System.out.println(details[o].toString());
+    //             if (!(contains(details[o]))) {
+    //                 temp[tempSize++] = details[o];
+    //             }
+    //             countsc++;
+    //             o++;
+    //             i++;
+
+    //         }
+    //     }
+    //     insobj.sort(temp, tempSize);
+    //     for (int a = 0; a < tempSize; a++) {
+    //         System.out.println(temp[a].toString());
+    //     }
+
+
+
+
+    // }
+    int temp;
+    public void vacancies() {
+        temp = 0;
+        Details[] result = new Details[vac];
+        for (int i = 0; i < un; i++) {
+            result[temp++] = details[i];
+            vac--;
         }
-        int j = i;
-        while (countbc < bc && j < size) {
-            if (details[j].getCategory().equals("BC")) {
-                // System.out.println(details[j].toString());
-                // if (!(contains(details[j]))) {
-                    temp[tempSize++] = details[j];
-                
-                countbc++;
-                // delete(details[j]);
-
-            }
-            j++;
-        }
-
-        int l = i;
-        while (countst < st && l < size) {
-            if (details[l].getCategory().equals("ST")) {
-                // System.out.println(details[l].toString());
-                // if (!(contains(details[l]))) {
-                    temp[tempSize++] = details[l];
-                
-
-                countst++;
-                // delete(details[l]);
-
-            }
-            l++;
-        }
-
-
-
-        int k = i;
-        while (countsc < sc && k < size) {
-            if (details[k].getCategory().equals("SC")) {
-                // if (!(contains(details[k]))) {
-                    temp[tempSize++] = details[k];
-                
-                // System.out.println(details[k].toString());
-                countsc++;
-                // delete(details[k]);
-
-            }
-            k++;
-        }
-        if (countbc < bc) {
-            int m = i;
-            while (countbc < bc) {
-                if (!(contains(details[m]))) {
-                    temp[tempSize++] = details[m];
+        for (int i = 0; i < size; i++) {
+            if (!(contains(details[i]))) {
+                if (vac != 0) {
+                    if (details[i].getCategory().equals("SC")
+                            && sc != 0) {
+                        result[temp++] = details[i];
+                        vac--;
+                        sc--;
+                    } else if (details[i].getCategory().equals("ST")
+                               && st != 0) {
+                        result[temp++] = details[i];
+                        vac--;
+                        st--;
+                    } else if (details[i].getCategory().equals("BC")
+                               && bc != 0) {
+                        result[temp++] = details[i];
+                        vac--;
+                        bc--;
+                    }
+                } else {
+                    return;
                 }
-                // System.out.println(details[m].toString());
-                countbc++;
-                m++;
-                i++;
-
             }
         }
-        if (countst < st) {
-            int n = i;
-            while (countst < st) {
-                // System.out.println(details[n].toString());
-                if (!(contains(details[n]))) {
-                    temp[tempSize++] = details[n];
+        for (int i = 0; i < size; i++) {
+            if (vac != 0) {
+                if (!contains(details[i])) {
+                    result[temp++] = details[i];
+                    vac--;
                 }
-                countst++;
-                n++;
-                i++;
-
             }
         }
-        if (countsc < sc) {
-            int o = i;
-            while (countsc < sc) {
-                // System.out.println(details[o].toString());
-                if (!(contains(details[o]))) {
-                    temp[tempSize++] = details[o];
-                }
-                countsc++;
-                o++;
-                i++;
-
-            }
+        insobj.sort(result, temp);
+        for(int i =0;i<temp;i++){
+            System.out.println(result[i].toString());
         }
-        insobj.sort(temp, tempSize);
-        for (int a = 0; a < tempSize; a++) {
-            System.out.println(temp[a].toString());
-        }
-
-
-
-
     }
 }
+
 class Insertion {
 
     public Insertion() {}
@@ -316,6 +374,6 @@ class Solution {
         resultObj.sort();
         resultObj.print();
         System.out.println();
-        resultObj.allotment();
+        resultObj.vacancies();
     }
 }
