@@ -165,10 +165,10 @@ class Results {
     public boolean contains(Details obj) {
         for (int i = 0; i < size; i++) {
             if (obj.getName().equals(details[i].getName())) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
     public void allotment() {
         Details[] temp = new Details[vac];
@@ -186,7 +186,7 @@ class Results {
         while (countbc < bc && j < size) {
             if (details[j].getCategory().equals("BC")) {
                 // System.out.println(details[j].toString());
-                if (contains(details[j])) {
+                if (!(contains(details[j]))) {
                     temp[tempSize++] = details[j];
                 }
                 countbc++;
@@ -200,7 +200,7 @@ class Results {
         while (countst < st && l < size) {
             if (details[l].getCategory().equals("ST")) {
                 // System.out.println(details[l].toString());
-                if (contains(details[l])) {
+                if (!(contains(details[l]))) {
                     temp[tempSize++] = details[l];
                 }
 
@@ -216,7 +216,7 @@ class Results {
         int k = i;
         while (countsc < sc && k < size) {
             if (details[k].getCategory().equals("SC")) {
-                if (contains(details[k])) {
+                if (!(contains(details[k]))) {
                     temp[tempSize++] = details[k];
                 }
                 // System.out.println(details[k].toString());
@@ -229,7 +229,7 @@ class Results {
         if (countbc < bc) {
             int m = i;
             while (countbc < bc) {
-                if (contains(details[m])) {
+                if (!(contains(details[m]))) {
                     temp[tempSize++] = details[m];
                 }
                 // System.out.println(details[m].toString());
@@ -243,7 +243,7 @@ class Results {
             int n = i;
             while (countst < st) {
                 // System.out.println(details[n].toString());
-                if (contains(details[n])) {
+                if (!(contains(details[n]))) {
                     temp[tempSize++] = details[n];
                 }
                 countst++;
@@ -256,7 +256,7 @@ class Results {
             int o = i;
             while (countsc < sc) {
                 // System.out.println(details[o].toString());
-                if (contains(details[o])) {
+                if (!(contains(details[o]))) {
                     temp[tempSize++] = details[o];
                 }
                 countsc++;
