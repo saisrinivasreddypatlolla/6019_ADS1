@@ -1,10 +1,6 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:10:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:28:48: '10' is a magic number. [MagicNumber]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:29:52: '10' is a magic number. [MagicNumber]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:208: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:227: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:252: Class Solution should be declared as final. [FinalClass]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:28:19: Name 'TEN' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:255: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 3 errors.
