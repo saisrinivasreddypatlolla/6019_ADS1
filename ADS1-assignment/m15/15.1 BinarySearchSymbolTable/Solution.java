@@ -101,6 +101,9 @@ class BinarySearchST<Keys extends Comparable<Keys>, Values> {
 	}
 	public Keys floor(Keys key) {
 		int rank = rank(key);
+		if(rank<0){
+			return null;
+		}
 		if ((rank < size) && (key.compareTo(keys[rank])) == 0) {
 			return keys[rank];
 		}
