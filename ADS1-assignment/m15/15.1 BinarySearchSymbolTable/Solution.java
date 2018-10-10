@@ -252,7 +252,7 @@ class BinarySearchST<Keys extends Comparable<Keys>, Values> {
 /**.
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**.
      * Constructs the object.
      */

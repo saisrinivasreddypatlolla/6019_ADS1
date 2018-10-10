@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m15\15.1 BinarySearchSymbolTable\Solution.java:255: Class Solution should be declared as final. [FinalClass]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
