@@ -25,9 +25,9 @@ class BinarySearchST<Keys extends Comparable<Keys>, Values> {
      * initialize the array size and size variable.
      */
     BinarySearchST() {
-        final int TEN = 10;
-        keys = (Keys[]) new Comparable[TEN];
-        values = (Values[]) new Comparable[TEN];
+        final int ten = 10;
+        keys = (Keys[]) new Comparable[ten];
+        values = (Values[]) new Comparable[ten];
         size = 0;
     }
     /**
