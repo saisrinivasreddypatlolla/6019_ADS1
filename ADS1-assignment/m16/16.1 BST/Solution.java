@@ -1,13 +1,38 @@
 import java.util.Scanner;
+/**.
+ * Class for book.
+ */
 class Book implements Comparable<Book> {
+	/**.
+	 * { var_description }
+	 */
 	String name;
+	/**.
+	 * { var_description }
+	 */
 	String author;
+	/**.
+	 * { var_description }
+	 */
 	double price;
-	Book(String bookName, String authorName, double cost) {
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      bookName    The book name
+	 * @param      authorName  The author name
+	 * @param      cost        The cost
+	 */
+	Book(final String bookName, final String authorName,
+		final double cost) {
 		this.name = bookName;
 		this.author = authorName;
 		this.price = cost;
 	}
+	/**
+	 * Gets the name.
+	 *
+	 * @return     The name.
+	 */
 	public String getName() {
 		return this.name;
 	}
@@ -29,7 +54,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
 
 	}
 	public void put(Book key, Values value) {
-		if(key == null){
+		if (key == null) {
 			return;
 		}
 		root = put(root, key, value);
@@ -49,17 +74,16 @@ class BinarySearchT<E extends Comparable<E>, Values> {
 		return node;
 	}
 	public Values get(Book key) {
-        return get(root, key);
-    }
+		return get(root, key);
+	}
 
-    private Values get(Node x, Book key) {
-        // if (key == null) throw new IllegalArgumentException("calls get() with a null key");
-        if (x == null) return null;
-        int cmp = key.getName().compareTo(x.key.getName());
-        if      (cmp < 0) return get(x.left, key);
-        else if (cmp > 0) return get(x.right, key);
-        else              return x.value;
-    }
+	private Values get(Node x, Book key) {
+		if (x == null) return null;
+		int cmp = key.getName().compareTo(x.key.getName());
+		if      (cmp < 0) return get(x.left, key);
+		else if (cmp > 0) return get(x.right, key);
+		else              return x.value;
+	}
 }
 class Solution {
 	private Solution() {
