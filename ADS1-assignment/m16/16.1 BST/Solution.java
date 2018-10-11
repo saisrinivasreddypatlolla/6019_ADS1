@@ -54,13 +54,37 @@ class Book implements Comparable<Book> {
  * @param      <Values>  The values
  */
 class BinarySearchT<E extends Comparable<E>, Values> {
-    Node root;
+    /**.
+     * { var_description }
+     */
+    private Node root;
+    /**.
+     * Class for node.
+     */
     class Node {
-        Book key;
-        Values value;
-        Node right;
-        Node left;
-        Node(Book key1, Values val) {
+        /**.
+         * { var_description }
+         */
+        private Book key;
+        /**.
+         * { var_description }
+         */
+        private Values value;
+        /**.
+         * { var_description }
+         */
+        private Node right;
+        /**.
+         * { var_description }
+         */
+        private Node left;
+        /**.
+         * Constructs the object.
+         *
+         * @param      key1  The key 1
+         * @param      val   The value
+         */
+        Node(final Book key1, final Values val) {
             this.key = key1;
             this.value = val;
         }
