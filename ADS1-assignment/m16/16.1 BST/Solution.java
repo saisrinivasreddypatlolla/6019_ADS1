@@ -23,7 +23,7 @@ class Book implements Comparable<Book> {
      * @param      cost        The cost
      */
     Book(final String bookName, final String authorName,
-        final double cost) {
+         final double cost) {
         this.name = bookName;
         this.author = authorName;
         this.price = cost;
@@ -112,7 +112,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      * @return     { description_of_the_return_value }
      */
     public Node put(final Node node, final Book key,
-        final Values value) {
+                    final Values value) {
         if (node == null) {
             return new Node(key, value);
         }
@@ -145,11 +145,17 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      * @return     { description_of_the_return_value }
      */
     private Values get(final Node x, final Book key) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
         int cmp = key.getName().compareTo(x.key.getName());
-        if      (cmp < 0) return get(x.left, key);
-        else if (cmp > 0) return get(x.right, key);
-        else              return x.value;
+        if (cmp < 0) {
+            return get(x.left, key);
+        } else if (cmp > 0) {
+            return get(x.right, key);
+        } else {
+            return x.value;
+        }
     }
 }
 /**.
@@ -175,13 +181,13 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 obj.put(new Book(tokens[1], tokens[2], Double.parseDouble(
-                                     tokens[3])), Integer.parseInt(tokens[4]));
+                                     tokens[2 + 1])), Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 System.out.println(obj.get(new Book(
                                                tokens[1], tokens[2],
                                                Double.parseDouble(
-                                                   tokens[3]))));
+                                                   tokens[2 + 1]))));
             }
         }
     }
