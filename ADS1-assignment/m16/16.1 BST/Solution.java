@@ -110,7 +110,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * This method is to add element to BST
      * Time Complexity is O(N) for worst case.
      * element is added until it reaches to the
-     * position it should added at. 
+     * position it should added at.
      *
      * @param      node   The node
      * @param      key    The key
