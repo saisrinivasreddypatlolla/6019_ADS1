@@ -4,15 +4,15 @@ import java.util.Scanner;
  */
 class Book implements Comparable<Book> {
     /**.
-     * { var_description }
+     * this variable is the name of book
      */
     private String name;
     /**.
-     * { var_description }
+     * this variable represents the author name.
      */
     private String author;
     /**.
-     * { var_description }
+     * the price of the book
      */
     private double price;
     /**.
@@ -31,13 +31,13 @@ class Book implements Comparable<Book> {
     /**
      * Gets the name.
      *
-     * @return     The name.
+     * @return     The name of book.
      */
     public String getName() {
         return this.name;
     }
     /**.
-     * { function_description }
+     * This method 
      *
      * @param      obj   The object
      *
@@ -50,10 +50,10 @@ class Book implements Comparable<Book> {
 /**.
  * Class for binary search t.
  *
- * @param      <E>       { parameter_description }
+ * @param      <Key>       { parameter_description }
  * @param      <Values>  The values
  */
-class BinarySearchT<E extends Comparable<E>, Values> {
+class BinarySearchT<Key extends Comparable<Key>, Values> {
     /**.
      * { var_description }
      */
@@ -65,7 +65,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
         /**.
          * { var_description }
          */
-        private Book key;
+        private Key key;
         /**.
          * { var_description }
          */
@@ -84,7 +84,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
          * @param      key1  The key 1
          * @param      val   The value
          */
-        Node(final Book key1, final Values val) {
+        Node(final Key key1, final Values val) {
             this.key = key1;
             this.value = val;
         }
@@ -96,7 +96,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      * @param      key    The key
      * @param      value  The value
      */
-    public void put(final Book key, final Values value) {
+    public void put(final Key key, final Values value) {
         if (key == null) {
             return;
         }
@@ -111,12 +111,12 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      *
      * @return     { description_of_the_return_value }
      */
-    public Node put(final Node node, final Book key,
+    public Node put(final Node node, final Key key,
                     final Values value) {
         if (node == null) {
             return new Node(key, value);
         }
-        int cmp = key.getName().compareTo(node.key.getName());
+        int cmp = key.compareTo(node.key);
         if (cmp < 0) {
             node.left = put(node.left, key, value);
         } else if (cmp > 0) {
@@ -133,7 +133,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      *
      * @return     { description_of_the_return_value }
      */
-    public Values get(final Book key) {
+    public Values get(final Key key) {
         return get(root, key);
     }
     /**.
@@ -144,11 +144,11 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      *
      * @return     { description_of_the_return_value }
      */
-    private Values get(final Node x, final Book key) {
+    private Values get(final Node x, final Key key) {
         if (x == null) {
             return null;
         }
-        int cmp = key.getName().compareTo(x.key.getName());
+        int cmp = key.compareTo(x.key);
         if (cmp < 0) {
             return get(x.left, key);
         } else if (cmp > 0) {
