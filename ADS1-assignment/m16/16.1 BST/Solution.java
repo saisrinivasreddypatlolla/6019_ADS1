@@ -37,25 +37,27 @@ class Book implements Comparable<Book> {
         return this.name;
     }
     /**.
-     * This method 
+     * This method is to compare both book names
+     * and return its value.
+     * Time Complexity is O(1)
      *
      * @param      obj   The object
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns int value
      */
     public int compareTo(final Book obj) {
         return this.getName().compareTo(obj.getName());
     }
 }
 /**.
- * Class for binary search t.
+ * Class for binary search tree.
  *
- * @param      <Key>       { parameter_description }
+ * @param      <Key>     Book object with book details
  * @param      <Values>  The values
  */
 class BinarySearchT<Key extends Comparable<Key>, Values> {
     /**.
-     * { var_description }
+     * starting element in the BST.
      */
     private Node root;
     /**.
@@ -63,19 +65,19 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      */
     class Node {
         /**.
-         * { var_description }
+         * Object of Book class with book details.
          */
         private Key key;
         /**.
-         * { var_description }
+         * value of the book in Book class
          */
         private Values value;
         /**.
-         * { var_description }
+         * Right node of the BST
          */
         private Node right;
         /**.
-         * { var_description }
+         * Left node of BST.
          */
         private Node left;
         /**.
@@ -91,7 +93,9 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
 
     }
     /**.
-     * { function_description }
+     * This method is to add a key and value to BST.
+     * Time Complexity is O(1).
+     * because it calls another put method to add elements.
      *
      * @param      key    The key
      * @param      value  The value
@@ -103,13 +107,16 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         root = put(root, key, value);
     }
     /**.
-     * { function_description }
+     * This method is to add element to BST
+     * Time Complexity is O(N) for worst case.
+     * element is added until it reaches to the
+     * position it should added at. 
      *
      * @param      node   The node
      * @param      key    The key
      * @param      value  The value
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns node
      */
     public Node put(final Node node, final Key key,
                     final Values value) {
@@ -127,34 +134,37 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         return node;
     }
     /**.
-     * { function_description }
+     * This method is to return the value of that key
+     * Time Complexity is O(N)
      *
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the value.
      */
     public Values get(final Key key) {
         return get(root, key);
     }
     /**.
-     * { function_description }
+     * This method is to return the value of that key
+     * Time Complexity is O(N)
      *
-     * @param      x     { parameter_description }
+     * @param      node  the node where the book details and
+     *                   values.
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the value of that key.
      */
-    private Values get(final Node x, final Key key) {
-        if (x == null) {
+    private Values get(final Node node, final Key key) {
+        if (node == null) {
             return null;
         }
-        int cmp = key.compareTo(x.key);
+        int cmp = key.compareTo(node.key);
         if (cmp < 0) {
-            return get(x.left, key);
+            return get(node.left, key);
         } else if (cmp > 0) {
-            return get(x.right, key);
+            return get(node.right, key);
         } else {
-            return x.value;
+            return node.value;
         }
     }
 }
@@ -169,7 +179,7 @@ final class Solution {
 
     }
     /**.
-     * { function_description }
+     * main method to perform operations
      *
      * @param      args  The arguments
      */
