@@ -6,15 +6,15 @@ class Book implements Comparable<Book> {
     /**.
      * { var_description }
      */
-    String name;
+    private String name;
     /**.
      * { var_description }
      */
-    String author;
+    private String author;
     /**.
      * { var_description }
      */
-    double price;
+    private double price;
     /**.
      * Constructs the object.
      *
@@ -36,7 +36,7 @@ class Book implements Comparable<Book> {
     public String getName() {
         return this.name;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      obj   The object
@@ -133,7 +133,7 @@ class BinarySearchT<E extends Comparable<E>, Values> {
      *
      * @return     { description_of_the_return_value }
      */
-    public Values get(Book key) {
+    public Values get(final Book key) {
         return get(root, key);
     }
     /**.
@@ -181,13 +181,17 @@ final class Solution {
             switch (tokens[0]) {
             case "put":
                 obj.put(new Book(tokens[1], tokens[2], Double.parseDouble(
-                                     tokens[2 + 1])), Integer.parseInt(tokens[2 + 2]));
+                                     tokens[2 + 1])),
+                        Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 System.out.println(obj.get(new Book(
                                                tokens[1], tokens[2],
                                                Double.parseDouble(
                                                    tokens[2 + 1]))));
+                break;
+            default:
+                break;
             }
         }
     }

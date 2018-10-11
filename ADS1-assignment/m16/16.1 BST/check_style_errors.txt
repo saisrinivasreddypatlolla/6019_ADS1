@@ -1,11 +1,4 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:9:12: Variable 'name' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:13:12: Variable 'author' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:17:12: Variable 'price' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:39: First sentence should end with a period. [JavadocStyle]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:136:23: Parameter key should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:181: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m16\16.1 BST\Solution.java:184: Line is longer than 80 characters (found 87). [LineLength]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 1 errors.
