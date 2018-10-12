@@ -19,8 +19,8 @@ class CubeSum implements Comparable<CubeSum> {
     /**.
      * Constructs the object.
      *
-     * @param      first1     { parameter_description }
-     * @param      second1     { parameter_description }
+     * @param      first1     the first number
+     * @param      second1     the second number
      */
     CubeSum(final int first1, final int second1) {
         this.sum = first1 * first1 * first1
@@ -53,11 +53,12 @@ class CubeSum implements Comparable<CubeSum> {
         return this.second;
     }
     /**.
-     * { function_description }
+     * This method compares both sums
      *
      * @param      that  The that
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the integer value after
+     *             comparision
      */
     public int compareTo(final CubeSum that) {
         if (this.sum < that.sum) {
@@ -97,6 +98,10 @@ final class Solution {
     }
     /**.
      * Main method to print the Nth number of M times of combinitions
+     * Time complexity of method is O(2N)
+     * first it will add all elements into minPQ
+     * and the while loop checks until we find Nth ramanujan number
+     * of M combinitions.
      *
      * @param      args  The arguments
      */
