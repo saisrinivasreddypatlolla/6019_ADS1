@@ -1,39 +1,90 @@
 import java.util.Scanner;
+/**.
+ * Class for cube sum.
+ */
 class CubeSum implements Comparable<CubeSum> {
+	/**.
+	 * This variable is for the sum of the cubes of
+	 * two numbers.
+	 */
 	private final int sum;
-	private final int i;
-	private final int j;
-
-	public CubeSum(int i, int j) {
-		this.sum = i * i * i + j * j * j;
-		this.i = i;
-		this.j = j;
+	/**.
+	 * This variable is the first number.
+	 */
+	private final int first;
+	/**
+	 * this variable is the second number
+	 */
+	private final int second;
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      first     { parameter_description }
+	 * @param      second     { parameter_description }
+	 */
+	public CubeSum(final int first, final int second) {
+		this.sum = first * first * first + second * second * second;
+		this.first = first;
+		this.second = second;
 	}
+	/**.
+	 * Gets the sum.
+	 *
+	 * @return     The sum.
+	 */
 	public int getSum() {
 		return this.sum;
 	}
+	/**.
+	 * Gets the first.
+	 *
+	 * @return     The first.
+	 */
 	public int getFirst() {
-		return this.i;
+		return this.first;
 	}
+	/**.
+	 * Gets the second.
+	 *
+	 * @return     The second.
+	 */
 	public int getSecond() {
-		return this.j;
+		return this.second;
 	}
-
-	public int compareTo(CubeSum that) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      that  The that
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int compareTo(final CubeSum that) {
 		if (this.sum < that.sum) return -1;
 		if (this.sum > that.sum) return +1;
 		return 0;
 	}
-
+	/**.
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
-		return sum + " = " + i + "^3" + " + " + j + "^3";
+		return sum + " = " + first + "^3" + " + " + second + "^3";
 	}
 
 
 
 }
-class Solution {
-	public static void main(String[] args) {
+/**.
+ * Class for solution.
+ */
+final class Solution {
+	/**.
+	 * Main method to print the Nth number of M times of combinitions
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] tokens = scan.nextLine().split(" ");
 		int count = 0;
@@ -42,13 +93,11 @@ class Solution {
 		int n = 600;
 		int temp = -1;
 
-		// initialize priority queue
 		MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
 		for (int i = 0; i <= n; i++) {
 			pq.insert(new CubeSum(i, i));
 		}
 
-		// find smallest sum, print it out, and update
 		while (!pq.isEmpty()) {
 			CubeSum s = pq.delMin();
 			if (temp == s.getSum()) {
