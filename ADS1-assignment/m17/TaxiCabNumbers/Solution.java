@@ -36,7 +36,7 @@ class Solution{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] tokens = scan.nextLine().split(" ");
-		int count = 1;
+		int count = 0;
         int N = Integer.parseInt(tokens[0]);
         int M = Integer.parseInt(tokens[1]);
         int n = 600;
