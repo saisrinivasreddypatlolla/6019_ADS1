@@ -88,7 +88,7 @@ final class Solution {
 	/**.
 	 * input numbers limit
 	 */
-	static final int input = 600;
+	static final int INPUT = 600;
 	/**.
 	 * Constructs the object.
 	 */
@@ -109,7 +109,7 @@ final class Solution {
 		int temp = -1;
 
 		MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-		for (int i = 0; i <= input; i++) {
+		for (int i = 0; i <= INPUT; i++) {
 			pq.insert(new CubeSum(i, i));
 		}
 
@@ -129,7 +129,7 @@ final class Solution {
 			}
 
 			temp = s.getSum();
-			if (s.getSecond() < input) {
+			if (s.getSecond() < INPUT) {
 				pq.insert(new CubeSum(
 				              s.getFirst(), s.getSecond() + 1));
 			}

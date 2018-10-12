@@ -1,6 +1,5 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:91:26: Name 'input' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 2 errors.
