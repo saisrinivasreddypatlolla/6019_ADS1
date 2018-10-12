@@ -1,15 +1,9 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:22:12: Unused @param tag for 'first'. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:23:12: Unused @param tag for 'second'. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:34: Expected @param tag for 'first1'. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:52: Expected @param tag for 'second1'. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:26: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:86:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:98:25: '600' is a magic number. [MagicNumber]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:122: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:123: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:88: First sentence should end with a period. [JavadocStyle]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:91:15: 'static' modifier out of order with the JLS suggestions. [ModifierOrder]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:91:26: Name 'n' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'. [ConstantName]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:133: Line is longer than 80 characters (found 88). [LineLength]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 6 errors.

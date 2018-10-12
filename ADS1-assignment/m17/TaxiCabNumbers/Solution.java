@@ -19,11 +19,12 @@ class CubeSum implements Comparable<CubeSum> {
 	/**.
 	 * Constructs the object.
 	 *
-	 * @param      first     { parameter_description }
-	 * @param      second     { parameter_description }
+	 * @param      first1     { parameter_description }
+	 * @param      second1     { parameter_description }
 	 */
-	public CubeSum(final int first1, final int second1) {
-		this.sum = first1 * first1 * first1 + second1 * second1 * second1;
+	CubeSum(final int first1, final int second1) {
+		this.sum = first1 * first1 * first1
+		           + second1 * second1 * second1;
 		this.first = first1;
 		this.second = second1;
 	}
@@ -84,6 +85,16 @@ class CubeSum implements Comparable<CubeSum> {
  * Class for solution.
  */
 final class Solution {
+	/**
+	 * input numbers limit
+	 */
+	final static int n = 600;
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
 	/**.
 	 * Main method to print the Nth number of M times of combinitions
 	 *
@@ -95,7 +106,6 @@ final class Solution {
 		int count = 0;
 		int number = Integer.parseInt(tokens[0]);
 		int times = Integer.parseInt(tokens[1]);
-		int n = 600;
 		int temp = -1;
 
 		MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
@@ -119,8 +129,9 @@ final class Solution {
 			}
 
 			temp = s.getSum();
-			if (s.getSecond() < n)
+			if (s.getSecond() < n) {
 				pq.insert(new CubeSum(s.getFirst(), s.getSecond() + 1));
+			}
 		}
 	}
 
