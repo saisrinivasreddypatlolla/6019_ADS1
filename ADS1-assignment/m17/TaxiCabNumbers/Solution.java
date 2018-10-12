@@ -12,7 +12,7 @@ class CubeSum implements Comparable<CubeSum> {
 	 * This variable is the first number.
 	 */
 	private final int first;
-	/**
+	/**.
 	 * this variable is the second number
 	 */
 	private final int second;
@@ -22,10 +22,10 @@ class CubeSum implements Comparable<CubeSum> {
 	 * @param      first     { parameter_description }
 	 * @param      second     { parameter_description }
 	 */
-	public CubeSum(final int first, final int second) {
-		this.sum = first * first * first + second * second * second;
-		this.first = first;
-		this.second = second;
+	public CubeSum(final int first1, final int second1) {
+		this.sum = first1 * first1 * first1 + second1 * second1 * second1;
+		this.first = first1;
+		this.second = second1;
 	}
 	/**.
 	 * Gets the sum.
@@ -59,8 +59,13 @@ class CubeSum implements Comparable<CubeSum> {
 	 * @return     { description_of_the_return_value }
 	 */
 	public int compareTo(final CubeSum that) {
-		if (this.sum < that.sum) return -1;
-		if (this.sum > that.sum) return +1;
+		if (this.sum < that.sum) {
+			return -1;
+		}
+		if (this.sum > that.sum) {
+			return +1;
+		}
+
 		return 0;
 	}
 	/**.
@@ -88,8 +93,8 @@ final class Solution {
 		Scanner scan = new Scanner(System.in);
 		String[] tokens = scan.nextLine().split(" ");
 		int count = 0;
-		int N = Integer.parseInt(tokens[0]);
-		int M = Integer.parseInt(tokens[1]);
+		int number = Integer.parseInt(tokens[0]);
+		int times = Integer.parseInt(tokens[1]);
 		int n = 600;
 		int temp = -1;
 
@@ -105,9 +110,9 @@ final class Solution {
 			} else {
 				count = 0;
 			}
-			if (count == M - 1) {
-				N--;
-				if (N == 0) {
+			if (count == times - 1) {
+				number--;
+				if (number == 0) {
 					System.out.println(s.getSum());
 					break;
 				}

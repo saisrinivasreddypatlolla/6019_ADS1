@@ -1,17 +1,15 @@
 Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:15: First sentence should end with a period. [JavadocStyle]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:22:12: Unused @param tag for 'first'. [JavadocMethod]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:23:12: Unused @param tag for 'second'. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:34: 'first' hides a field. [HiddenField]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:51: 'second' hides a field. [HiddenField]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:62: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:63: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:81:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:91:21: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:92:21: Name 'M' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:93:25: '600' is a magic number. [MagicNumber]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:117: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:118: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:34: Expected @param tag for 'first1'. [JavadocMethod]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:25:52: Expected @param tag for 'second1'. [JavadocMethod]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:26: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:86:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:98:25: '600' is a magic number. [MagicNumber]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:122: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m17\TaxiCabNumbers\Solution.java:123: Line is longer than 80 characters (found 88). [LineLength]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 12 errors.
