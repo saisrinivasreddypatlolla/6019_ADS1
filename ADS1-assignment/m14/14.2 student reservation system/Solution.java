@@ -6,15 +6,15 @@ import java.util.Comparator;
  */
 class Students {
     /**
-     * { StudentInfo Object Array }.
+     * StudentInfo Object Array.
      */
     private StudentInfo[] info;
     /**
-     * { num Variable }.
+     *  num Variable.
      */
     private int num;
     /**
-     * { size of StudentInfo Array }.
+     * size of StudentInfo Array.
      */
     private int size;
     /**
@@ -28,7 +28,9 @@ class Students {
         size = 0;
     }
     /**
-     * { Add Object to Object Array }.
+     * Add Object to Object Array.
+     * Time complexity is O(1)
+     * add's the element at last position of array.
      *
      * @param      stud  The stud
      */
@@ -40,7 +42,7 @@ class Students {
     }
 
     /**
-     * { Resizing the Array }.
+     * Resizing the Array.
      */
     public void resize() {
         info = Arrays.copyOf(info, info.length * 2);
@@ -68,47 +70,47 @@ class CategoryCriteria {
         //Unused.
     }
     /**
-     * { Object for Insertion Class }.
+     * Object for Insertion Class.
      */
     private Insertion mergee = new Insertion();
     /**
-     * { No.of applied }.
+     * No.of applied.
      */
     private int applied;
     /**
-     * { No.of Vacancies }.
+     * No.of Vacancies.
      */
     private int vacancies;
     /**
-     * { No.of Unrevacancies }.
+     * No.of Unrevacancies.
      */
     private int urevacancies;
     /**
-     * { No.of BC Vacancies }.
+     * No.of BC Vacancies.
      */
     private int bcvac;
     /**
-     * { No.of SC Vacancies }.
+     * No.of SC Vacancies.
      */
     private int scvac;
     /**
-     * { No.of ST Vacancies }.
+     * No.of ST Vacancies.
      */
     private int stvac;
     /**
-     * { Size of the Array }.
+     * Size of the Array.
      */
     private int asize;
     /**
-     * { Duplicate array for Sorted Objects }.
+     * Duplicate array for Sorted Objects.
      */
     private StudentInfo[] dupSorted;
     /**
-     * { size of the Object Array }.
+     * size of the Object Array.
      */
     private int size;
     /**
-     * { Array to store objects according category }.
+     * Array to store objects according category.
      */
     private StudentInfo[] catSorted;
     /**
@@ -117,8 +119,8 @@ class CategoryCriteria {
      * @param      app     The application
      * @param      vac     The vac
      * @param      urev    The urev
-     * @param      bv      { BC Vacancies }
-     * @param      sv      { SC Vacancies }
+     * @param      bv      BC Vacancies
+     * @param      sv      SC Vacancies
      * @param      stv     The stv
      * @param      sorted  The sorted
      */
@@ -139,23 +141,28 @@ class CategoryCriteria {
     }
 
     /**
-     * { Checks whether the Object contained in Array }.
+     * Checks whether the Object contained in Array.
+     * Time complexity is O(N)
+     * it checks the element from the starting of the
+     * array to end.
      *
      * @param      student  The student
      *
-     * @return     { Returns true id=f contains else false }
+     * @return     Returns true if contains else false
      */
     private boolean contains(final StudentInfo student) {
         for (int i = 0; i < asize; i++) {
             if (catSorted[i].getName().equals(student.getName())) {
-                // System.out.println(catSorted[i].getName());
                 return true;
             }
         }
         return false;
     }
     /**
-     * { Categorising According to Criteria }.
+     * Categorising According to Criteria.
+     * Time complexity is O(N)
+     * it will allot the seats in the resesrved category
+     * using seat vacancies.
      */
     public void catCriteria() {
         for (int i = 0; i < urevacancies; i++) {
@@ -202,12 +209,12 @@ class CategoryCriteria {
  */
 public final class Solution {
     /**
-     * { Constructor }.
+     * Constructor.
      */
     private Solution() {
     }
     /**
-     * main Method.
+     * main method to perform operations.
      *
      * @param      args  The arguments
      */
@@ -252,7 +259,7 @@ class Insertion {
     }
 
     /**
-     * { Insertion Sort }.
+     * Insertion Sort.
      * Worst Case Complexity is O(N^2).
      * It Iterates through out the array two times due to nested for loop.
      *
@@ -271,11 +278,11 @@ class Insertion {
     }
 
     /**
-     * { Swapping Elements in the Array }.
+     * Swapping Elements in the Array.
      *
-     * @param      a     { Student Item }
-     * @param      i     { index i }
-     * @param      j     { index j }
+     * @param      a     Student Item
+     * @param      i     index i
+     * @param      j     index j
      */
     private  void exch(final StudentInfo[] a, final int i,
                        final int j) {
@@ -285,20 +292,22 @@ class Insertion {
     }
 
     /**
-     * { Less method }.
+     * Less method.
      *
-     * @param      a     { Student Item 1 }
-     * @param      b     { Student Item 2 }
+     * @param      a     Student Item 1
+     * @param      b     Student Item 2
      * @param      comp  The component
      *
-     * @return     { Returns boolean }
+     * @return     Returns boolean
      */
     private boolean less(final StudentInfo a, final StudentInfo b,
                          final Comparator comp) {
         return comp.compare(a, b) < 0;
     }
     /**.
-     * { Print to print the Output }
+     * Print to print the Output
+     * Time complexity is O(N)
+     * prints all the values in array.
      *
      * @param      items  The items
      */
