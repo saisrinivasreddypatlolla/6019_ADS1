@@ -20,6 +20,9 @@ class MedianFinding {
     }
     /**.
      * this method inserts element into minheap.
+     * Time complexity of this method is O(N)
+     * it will insert at last position and calls
+     * swim method.
      *
      * @param      item  The item
      */
@@ -28,6 +31,9 @@ class MedianFinding {
     }
     /**.
      * this method inserts element into maxheap.
+     * Time complexity of this method is O(N)
+     * it will insert at last position and calls
+     * swim method.
      *
      * @param      item  The item
      */
@@ -36,6 +42,8 @@ class MedianFinding {
     }
     /**.
      * Gets the minimum element from minheap.
+     * Time complexity is O(1)
+     * returns the top element min pq.
      *
      * @return     The minimum element from minheap.
      */
@@ -44,6 +52,8 @@ class MedianFinding {
     }
     /**.
      * Gets the maximum element from maxheap.
+     * Time complexity is O(1)
+     * returns the top element max pq.
      *
      * @return     The maximum element from maxheap.
      */
@@ -52,6 +62,8 @@ class MedianFinding {
     }
     /**.
      * this method deletes the min element from minheap
+     * Time complexity is O(1)
+     * returns the top element min pq.
      *
      * @return     returns the deleted element from minheap
      */
@@ -60,6 +72,8 @@ class MedianFinding {
     }
     /**.
      * this method deletes the max element from maxheap
+     * Time complexity is O(1)
+     * returns the top element min pq.
      *
      * @return     returns the deleted element from maxheap
      */
@@ -68,6 +82,8 @@ class MedianFinding {
     }
     /**.
      * Gets the size of maxheap.
+     * Time complexity is O(1)
+     * returns the size of min pq.
      *
      * @return     the size of maxheap.
      */
@@ -76,6 +92,8 @@ class MedianFinding {
     }
     /**.
      * the size of minheap
+     * Time complexity is O(1)
+     * returns the size of max pq.
      *
      * @return     the size of minheap.
      */
