@@ -48,6 +48,10 @@ class Book implements Comparable<Book> {
     public int compareTo(final Book obj) {
         return this.getName().compareTo(obj.getName());
     }
+    public String toString(){
+        return this.name+", "+this.author+", "
+        +this.price;
+    }
 }
 /**.
  * Class for binary search tree.
