@@ -48,9 +48,14 @@ class Book implements Comparable<Book> {
     public int compareTo(final Book obj) {
         return this.getName().compareTo(obj.getName());
     }
-    public String toString(){
-        return this.name+", "+this.author+", "
-        +this.price;
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return this.name + ", " + this.author + ", "
+               + this.price;
     }
 }
 /**.
@@ -84,6 +89,9 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
          * Left node of BST.
          */
         private Node left;
+        /**
+         * size of the tree at that node.
+         */
         private int size;
         /**.
          * Constructs the object.
@@ -174,73 +182,174 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
             return node.value;
         }
     }
+    /**.
+     * this method returns minimum element in the tree
+     * Time complexity is O(logN)
+     *
+     * @return     returns minimum book details in the tree
+     */
     public Key min() {
         return min(root).key;
     }
-
-    private Node min(Node x) {
-        if (x.left == null) return x;
-        else                return min(x.left);
+    /**.
+     * this method returns minimum element in the tree
+     * Time complexity is O(logN)
+     * it checks only left side of tree to find minimum
+     * element.
+     *
+     * @param      node     node it starts the checkong
+     *
+     * @return     returns minimum book details in the tree
+     */
+    private Node min(final Node node) {
+        if (node.left == null) return node;
+        else                return min(node.left);
     }
+    /**.
+     * this method returns maximum element in the tree
+     * Time complexity is O(logN)
+     *
+     * @return     returns maximum element in the tree
+     */
     public Key max() {
         return max(root).key;
     }
-
-    private Node max(Node x) {
-        if (x.right == null) return x;
-        else                 return max(x.right);
+    /**.
+     * this method returns maximum element in the tree
+     * Time complexity is O(logN)
+     * it checks only right side of tree to find max element
+     *
+     * @param      node  The node
+     *
+     * @return     eturns maximum element in the tree
+     */
+    private Node max(final Node node) {
+        if (node.right == null) return node;
+        else                 return max(node.right);
     }
-    public Key floor(Key key) {
-        Node x = floor(root, key);
-        if (x == null) return null;
-        else return x.key;
+    /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     *
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
+    public Key floor(final Key key) {
+        Node node = floor(root, key);
+        if (node == null) return null;
+        else return node.key;
     }
-
-    private Node floor(Node x, Key key) {
-        if (x == null) return null;
-        int cmp = key.compareTo(x.key);
-        if (cmp == 0) return x;
-        if (cmp <  0) return floor(x.left, key);
-        Node t = floor(x.right, key);
+    /**
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     * it checks the element from root node to desired node
+     *
+     * @param      node     node with bookdetails
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
+    private Node floor(final Node node, final Key key) {
+        if (node == null) return null;
+        int cmp = key.compareTo(node.key);
+        if (cmp == 0) return node;
+        if (cmp <  0) return floor(node.left, key);
+        Node t = floor(node.right, key);
         if (t != null) return t;
-        else return x;
+        else return node;
     }
-    public Key ceiling(Key key) {
-        Node x = ceiling(root, key);
-        if (x == null) return null;
-        else return x.key;
+    /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     *
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
+    public Key ceiling(final Key key) {
+        Node node = ceiling(root, key);
+        if (node == null) return null;
+        else return node.key;
     }
-
-    private Node ceiling(Node x, Key key) {
-        if (x == null) return null;
-        int cmp = key.compareTo(x.key);
-        if (cmp == 0) return x;
+    /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     * it checks the element from root node to desired node
+     *
+     * @param      node  The node
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
+    private Node ceiling(final Node node, final Key key) {
+        if (node == null) return null;
+        int cmp = key.compareTo(node.key);
+        if (cmp == 0) return node;
         if (cmp < 0) {
-            Node t = ceiling(x.left, key);
+            Node t = ceiling(node.left, key);
             if (t != null) return t;
-            else return x;
+            else return node;
         }
-        return ceiling(x.right, key);
+        return ceiling(node.right, key);
     }
-    public Key select(int k) {
-        Node x = select(root, k);
-        return x.key;
+    /**.
+     * this method returns the element in that position
+     * Time complexity is O(logN)
+     *
+     * @param      k     position given as input
+     *
+     * @return     returns the element in that position
+     */
+    public Key select(final int k) {
+        Node node = select(root, k);
+        return node.key;
     }
+    /**.
+     * size of tree
+     *
+     * @return     returns size of tree
+     */
     public int size() {
         return size(root);
     }
-
-    private int size(Node x) {
-        if (x == null) return 0;
-        else return x.size;
+    /**
+     * returns size of tree
+     * Time Complexity is O(1).
+     * it returns the size of that node.
+     *
+     * @param      node  The node
+     *
+     * @return     returns size of tree.
+     */
+    private int size(final Node node) {
+        if (node == null) return 0;
+        else return node.size;
     }
-
-    private Node select(Node x, int k) {
-        if (x == null) return null; 
-        int t = size(x.left); 
-        if      (t > k) return select(x.left,  k); 
-        else if (t < k) return select(x.right, k-t-1); 
-        else            return x; 
+    /**
+     * this method returns the element in that position
+     * Time complexity is O(logN)
+     * it checks from root node to desired position
+     *
+     * @param      node  The node
+     * @param      k     position of node
+     *
+     * @return     returns node of the that position
+     */
+    private Node select(final Node node, final int k) {
+        if (node == null) return null;
+        int t = size(node.left);
+        if      (t > k) return select(node.left,  k);
+        else if (t < k) return select(node.right, k - t - 1);
+        else            return node;
     }
 
 }
