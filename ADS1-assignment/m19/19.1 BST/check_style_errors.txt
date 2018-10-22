@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m19\19.1 BST\Solution.java:365: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m19\19.1 BST\Solution.java:367: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 2 errors.

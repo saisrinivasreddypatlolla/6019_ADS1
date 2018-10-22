@@ -362,9 +362,11 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
     private int size(final Node node) {
         if (node == null) {
             return 0;
-        } else return node.size;
+        } else {
+            return node.size;
+        }
     }
-    /**
+    /**.
      * this method returns the element in that position
      * Time complexity is O(logN)
      * it checks from root node to desired position
