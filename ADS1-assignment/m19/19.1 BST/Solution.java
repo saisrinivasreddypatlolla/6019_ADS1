@@ -84,15 +84,17 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
          * Left node of BST.
          */
         private Node left;
+        private int size;
         /**.
          * Constructs the object.
          *
          * @param      key1  The key 1
          * @param      val   The value
          */
-        Node(final Key key1, final Values val) {
+        Node(final Key key1, final Values val, final int size1) {
             this.key = key1;
             this.value = val;
+            this.size = size1;
         }
 
     }
@@ -125,7 +127,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
     public Node put(final Node node, final Key key,
                     final Values value) {
         if (node == null) {
-            return new Node(key, value);
+            return new Node(key, value, 1);
         }
         int cmp = key.compareTo(node.key);
         if (cmp < 0) {
@@ -135,6 +137,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         } else {
             node.value = value;
         }
+        node.size = 1 + size(node.left) + size(node.right);
         return node;
     }
     /**.
@@ -219,6 +222,26 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         }
         return ceiling(x.right, key);
     }
+    public Key select(int k) {
+        Node x = select(root, k);
+        return x.key;
+    }
+    public int size() {
+        return size(root);
+    }
+
+    private int size(Node x) {
+        if (x == null) return 0;
+        else return x.size;
+    }
+
+    private Node select(Node x, int k) {
+        if (x == null) return null; 
+        int t = size(x.left); 
+        if      (t > k) return select(x.left,  k); 
+        else if (t < k) return select(x.right, k-t-1); 
+        else            return x; 
+    }
 
 }
 /**.
@@ -270,6 +293,9 @@ final class Solution {
                                        new Book(tokens[1], tokens[2],
                                                 Double.parseDouble(
                                                     tokens[2 + 1]))));
+                break;
+            case "select":
+                System.out.println(obj.select(Integer.parseInt(tokens[1])));
                 break;
             default:
                 break;
