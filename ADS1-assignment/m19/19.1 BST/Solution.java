@@ -93,11 +93,12 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
          * size of the tree at that node.
          */
         private int size;
-        /**.
+        /**
          * Constructs the object.
          *
-         * @param      key1  The key 1
-         * @param      val   The value
+         * @param      key1   The key 1
+         * @param      val    The value
+         * @param      size1  The size 1
          */
         Node(final Key key1, final Values val, final int size1) {
             this.key = key1;
@@ -202,8 +203,11 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * @return     returns minimum book details in the tree
      */
     private Node min(final Node node) {
-        if (node.left == null) return node;
-        else                return min(node.left);
+        if (node.left == null) {
+            return node;
+        } else {
+            return min(node.left);
+        }
     }
     /**.
      * this method returns maximum element in the tree
@@ -224,8 +228,11 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * @return     eturns maximum element in the tree
      */
     private Node max(final Node node) {
-        if (node.right == null) return node;
-        else                 return max(node.right);
+        if (node.right == null) {
+            return node;
+        } else {
+            return max(node.right);
+        }
     }
     /**.
      * this method returns the value of the given
@@ -239,8 +246,11 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      */
     public Key floor(final Key key) {
         Node node = floor(root, key);
-        if (node == null) return null;
-        else return node.key;
+        if (node == null) {
+            return null;
+        } else {
+            return node.key;
+        }
     }
     /**
      * this method returns the value of the given
@@ -255,13 +265,22 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      *             book data else returns null.
      */
     private Node floor(final Node node, final Key key) {
-        if (node == null) return null;
+        if (node == null) {
+            return null;
+        }
         int cmp = key.compareTo(node.key);
-        if (cmp == 0) return node;
-        if (cmp <  0) return floor(node.left, key);
+        if (cmp == 0) {
+            return node;
+        }
+        if (cmp <  0) {
+            return floor(node.left, key);
+        }
         Node t = floor(node.right, key);
-        if (t != null) return t;
-        else return node;
+        if (t != null) {
+            return t;
+        } else {
+            return node;
+        }
     }
     /**.
      * this method returns the value of the given
@@ -275,8 +294,11 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      */
     public Key ceiling(final Key key) {
         Node node = ceiling(root, key);
-        if (node == null) return null;
-        else return node.key;
+        if (node == null) {
+            return null;
+        } else {
+            return node.key;
+        }
     }
     /**.
      * this method returns the value of the given
@@ -291,13 +313,20 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      *             book data else returns null.
      */
     private Node ceiling(final Node node, final Key key) {
-        if (node == null) return null;
+        if (node == null) {
+            return null;
+        }
         int cmp = key.compareTo(node.key);
-        if (cmp == 0) return node;
+        if (cmp == 0) {
+            return node;
+        }
         if (cmp < 0) {
             Node t = ceiling(node.left, key);
-            if (t != null) return t;
-            else return node;
+            if (t != null) {
+                return t;
+            } else {
+                return node;
+            }
         }
         return ceiling(node.right, key);
     }
@@ -331,8 +360,9 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * @return     returns size of tree.
      */
     private int size(final Node node) {
-        if (node == null) return 0;
-        else return node.size;
+        if (node == null) {
+            return 0;
+        } else return node.size;
     }
     /**
      * this method returns the element in that position
@@ -345,11 +375,17 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * @return     returns node of the that position
      */
     private Node select(final Node node, final int k) {
-        if (node == null) return null;
+        if (node == null) {
+            return null;
+        }
         int t = size(node.left);
-        if      (t > k) return select(node.left,  k);
-        else if (t < k) return select(node.right, k - t - 1);
-        else            return node;
+        if      (t > k) {
+            return select(node.left,  k);
+        } else if (t < k) {
+            return select(node.right, k - t - 1);
+        } else {
+            return node;
+        }
     }
 
 }
