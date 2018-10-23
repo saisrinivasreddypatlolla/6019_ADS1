@@ -389,50 +389,92 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
             return node;
         }
     }
+    /**.
+     * { function_description }
+     */
     public void deleteMax() {
         root = deleteMax(root);
     }
-
-    private Node deleteMax(Node x) {
-        if (x.right == null) return x.left;
-        x.right = deleteMax(x.right);
-        x.size = size(x.left) + size(x.right) + 1;
-        return x;
+    /**.
+     * { function_description }
+     *
+     * @param      node     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node deleteMax(final Node node) {
+        if (node.right == null) {
+            return node.left;
+        }
+        node.right = deleteMax(node.right);
+        node.size = size(node.left) + size(node.right) + 1;
+        return node;
     }
+    /**.
+     * { function_description }
+     */
     public void deleteMin() {
         root = deleteMin(root);
     }
-
-    private Node deleteMin(Node x) {
-        if (x.left == null) return x.right;
-        x.left = deleteMin(x.left);
-        x.size = size(x.left) + size(x.right) + 1;
-        return x;
+    /**.
+     * { function_description }
+     *
+     * @param      node  The node
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node deleteMin(final Node node) {
+        if (node.left == null) {
+            return node.right;
+        }
+        node.left = deleteMin(node.left);
+        node.size = size(node.left) + size(node.right) + 1;
+        return node;
     }
-     public void delete(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     */
+    public void delete(final Key key) {
         root = delete(root, key);
     }
+    /**.
+     * { function_description }
+     *
+     * @param      node  The node
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private Node delete(Node node, final Key key) {
+        if (node == null) {
+            return null;
+        }
 
-    private Node delete(Node x, Key key) {
-        if (x == null) return null;
-
-        int cmp = key.compareTo(x.key);
-        if      (cmp < 0) x.left  = delete(x.left,  key);
-        else if (cmp > 0) x.right = delete(x.right, key);
-        else { 
-            if (x.right == null) return x.left;
-            if (x.left  == null) return x.right;
-            Node t = x;
-            x = min(t.right);
-            x.right = deleteMin(t.right);
-            x.left = t.left;
-        } 
-        x.size = size(x.left) + size(x.right) + 1;
-        return x;
-    } 
+        int cmp = key.compareTo(node.key);
+        if      (cmp < 0) {
+            node.left  = delete(node.left,  key);
+        } else if (cmp > 0) {
+            node.right = delete(node.right, key);
+        } else {
+            if (node.right == null) {
+                return node.left;
+            }
+            if (node.left  == null) {
+                return node.right;
+            }
+            Node t = node;
+            node = min(t.right);
+            node.right = deleteMin(t.right);
+            node.left = t.left;
+        }
+        node.size = size(node.left) + size(node.right) + 1;
+        return node;
+    }
 
 }
-/**.
+/**
  * Class for solution.
  */
 final class Solution {
@@ -487,7 +529,7 @@ final class Solution {
                 break;
             case "delete":
                 obj.delete(new Book(tokens[1], tokens[2], Double.parseDouble(
-                                     tokens[2 + 1])));
+                                        tokens[2 + 1])));
                 break;
             case "deleteMax":
                 obj.deleteMax();

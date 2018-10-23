@@ -1,24 +1,4 @@
 Starting audit...
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:392:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:396:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:396:28: Parameter x should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:397: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:402:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:406:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:406:28: Parameter x should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:407: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:412:6: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:412:25: Parameter key should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:416:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:416:25: Parameter x should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:416:33: Parameter key should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:417: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:420: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:421: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:422: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:423: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:424: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:429: Line has trailing spaces. [RegexpSingleline]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:432: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m20\20.1 BST\Solution.java:450:25: Parameter node should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 21 errors.
+Checkstyle ends with 1 errors.
