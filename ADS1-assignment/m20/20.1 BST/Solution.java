@@ -109,7 +109,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
     }
     /**.
      * This method is to add a key and value to BST.
-     * Time Complexity is O(1).
+     * Time Complexity is O(N).
      * because it calls another put method to add elements.
      *
      * @param      key    The key
@@ -390,17 +390,22 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         }
     }
     /**.
-     * { function_description }
+     * this method deletes maximum element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree.
+     * 
      */
     public void deleteMax() {
         root = deleteMax(root);
     }
     /**.
-     * { function_description }
+     * this method deletes maximum element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree.
      *
-     * @param      node     { parameter_description }
+     * @param      node     
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the node 
      */
     private Node deleteMax(final Node node) {
         if (node.right == null) {
@@ -411,17 +416,21 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         return node;
     }
     /**.
-     * { function_description }
+     * this method deletes minimum element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree.
      */
     public void deleteMin() {
         root = deleteMin(root);
     }
     /**.
-     * { function_description }
+     * this method deletes minimum element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree
      *
      * @param      node  The node
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the node
      */
     private Node deleteMin(final Node node) {
         if (node.left == null) {
@@ -432,7 +441,9 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         return node;
     }
     /**.
-     * { function_description }
+     * this method deletes desired element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree
      *
      * @param      key   The key
      */
@@ -440,37 +451,40 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
         root = delete(root, key);
     }
     /**.
-     * { function_description }
+     * this method deletes desired element from the tree.
+     * Time complexity is O(h)
+     * h is the height of the tree
      *
      * @param      node  The node
      * @param      key   The key
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the node
      */
-    private Node delete(Node node, final Key key) {
-        if (node == null) {
+    private Node delete(final Node node, final Key key) {
+        Node temp = node;
+        if (temp == null) {
             return null;
         }
 
-        int cmp = key.compareTo(node.key);
+        int cmp = key.compareTo(temp.key);
         if      (cmp < 0) {
-            node.left  = delete(node.left,  key);
+            temp.left  = delete(temp.left,  key);
         } else if (cmp > 0) {
-            node.right = delete(node.right, key);
+            temp.right = delete(temp.right, key);
         } else {
-            if (node.right == null) {
-                return node.left;
+            if (temp.right == null) {
+                return temp.left;
             }
-            if (node.left  == null) {
-                return node.right;
+            if (temp.left  == null) {
+                return temp.right;
             }
-            Node t = node;
-            node = min(t.right);
-            node.right = deleteMin(t.right);
-            node.left = t.left;
+            Node tempNode = temp;
+            temp = min(tempNode.right);
+            temp.right = deleteMin(tempNode.right);
+            temp.left = tempNode.left;
         }
-        node.size = size(node.left) + size(node.right) + 1;
-        return node;
+        temp.size = size(temp.left) + size(temp.right) + 1;
+        return temp;
     }
 
 }
