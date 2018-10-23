@@ -393,7 +393,7 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * this method deletes maximum element from the tree.
      * Time complexity is O(h)
      * h is the height of the tree.
-     * 
+     *
      */
     public void deleteMax() {
         root = deleteMax(root);
@@ -403,9 +403,9 @@ class BinarySearchT<Key extends Comparable<Key>, Values> {
      * Time complexity is O(h)
      * h is the height of the tree.
      *
-     * @param      node     
+     * @param      node     the node
      *
-     * @return     returns the node 
+     * @return     returns the node
      */
     private Node deleteMax(final Node node) {
         if (node.right == null) {
