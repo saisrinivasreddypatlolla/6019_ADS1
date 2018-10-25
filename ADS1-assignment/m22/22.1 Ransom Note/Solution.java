@@ -101,7 +101,7 @@ class Linkedlist {
                     temp = temp.getNext();
                 }
             }
-            if (flag == false) {
+            if (!flag) {
                 newnode.setNext(head);
                 head = newnode;
             }
