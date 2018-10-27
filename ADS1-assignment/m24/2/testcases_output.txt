@@ -62,7 +62,7 @@ Exception in thread "main" java.lang.NumberFormatException: empty String
 	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(Unknown Source)
 	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(Unknown Source)
 	at java.base/java.lang.Double.parseDouble(Unknown Source)
-	at Solution.main(Solution.java:65)
+	at Solution.main(Solution.java:82)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
