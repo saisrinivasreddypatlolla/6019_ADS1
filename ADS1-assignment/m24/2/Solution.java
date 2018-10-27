@@ -1,23 +1,53 @@
-import java.util.*;
+import java.util.Scanner;
+/**
+ * Class for student details.
+ */
 class StudentDetails {
+	/**
+	 * roll number of student.
+	 */
 	Integer rollNumber;
+	/**
+	 * name of student.
+	 */
 	String name;
-	Double totalMarks;
-	StudentDetails(Integer roll, String name1) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      roll   The roll number of student
+	 * @param      name1  The name of student.
+	 */
+	StudentDetails(final Integer roll, final String name1) {
 		this.rollNumber = roll;
 		this.name = name1;
 	}
+	/**
+	 * Gets the roll.
+	 *
+	 * @return     The roll number.
+	 */
 	public Integer getRoll() {
 		return this.rollNumber;
 	}
+	/**
+	 * Gets the name.
+	 *
+	 * @return     The name.
+	 */
 	public String getName() {
 		return this.name;
 	}
-	public Double getMarks() {
-		return this.totalMarks;
-	}
 }
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * main method to perform operations.
+	 * Time complexity of this method is 
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		BST<Double, StudentDetails> obj = new BST<Double, StudentDetails>();
 		Scanner scan = new Scanner(System.in);
@@ -35,6 +65,20 @@ class Solution {
 					System.out.println(obj.get(Double.parseDouble(keys[i])).getName());
 				}
 
+
+			} else if(tokens1[1].equals("LE")){
+				Double min = obj.min();
+				String[] lessKeys = obj.keys(min, Double.parseDouble(tokens1[1])).toString().split(" ");
+				for (int i = 0; i < lessKeys.length; i++) {
+					System.out.println(obj.get(Double.parseDouble(lessKeys[i])).getName());
+				}
+
+			} else if(tokens1[1].equals("GE")){
+				Double max = obj.max();
+				String[] gretKeys = obj.keys(Double.parseDouble(tokens1[1]), max).toString().split(" ");
+				for (int i = 0; i < gretKeys.length; i++) {
+					System.out.println(obj.get(Double.parseDouble(gretKeys[i])).getName());
+				}
 
 			}
 		}
