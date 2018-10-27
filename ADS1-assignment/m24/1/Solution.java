@@ -11,7 +11,12 @@ final class Solution {
 	}
 	/**
 	 * the main method to perform opertions.
-	 * 
+	 * Time complexity of this method is
+	 * O(MlogN*+PlogN*)
+	 * M is the number of times put method called
+	 * logN* is the put method time complexity for N values
+	 * P is te number of times get method called
+	 * logN* is the get method time complexity for N values
 	 *
 	 * @param      args  The arguments
 	 */
