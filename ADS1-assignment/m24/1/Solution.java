@@ -1,22 +1,34 @@
 import java.util.Scanner;
+/**
+ * Solution class to perform operations.
+ */
 final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
-	public static void main(String[] args) {
-		LinearProbingHashST<Integer, String> st =
+	/**
+	 * the main method to perform opertions.
+	 * 
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
+		LinearProbingHashST<Integer, String> obj =
 		    new LinearProbingHashST<Integer, String>();
 		Scanner scan = new Scanner(System.in);
 		int inputs = Integer.parseInt(scan.nextLine());
 		for (int i = 0; i < inputs; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			String s = tokens[1] + "," + tokens[2];
-			st.put(Integer.parseInt(tokens[0]), s);
+			obj.put(Integer.parseInt(tokens[0]), s);
 		}
 		int values = Integer.parseInt(scan.nextLine());
 		for (int j = 0; j < values; j++) {
 			String[] tokens1 = scan.nextLine().split(" ");
-			String s = st.get(Integer.parseInt(tokens1[1]));
+			String s = obj.get(Integer.parseInt(tokens1[1]));
 			if (s != null) {
 				String[] tokens2 = s.split(",");
 				if (Integer.parseInt(tokens1[2]) == 1) {

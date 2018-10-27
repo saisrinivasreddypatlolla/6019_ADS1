@@ -1,9 +1,6 @@
 Starting audit...
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:6:33: Parameter args should be final. [FinalParameters]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:25: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:14: Line has trailing spaces. [RegexpSingleline]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\1\Solution.java:37: Line is longer than 80 characters (found 91). [LineLength]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 3 errors.
