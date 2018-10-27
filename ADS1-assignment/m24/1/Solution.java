@@ -24,7 +24,9 @@ final class Solution {
 				} else {
 					System.out.println(Double.parseDouble(tokens2[1]));
 				}
-			} 
+			} else {
+				System.out.println("Student doesn't exists...");
+			}
 		}
 	}
 
