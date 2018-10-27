@@ -1,11 +1,14 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 Clark
 Rivest
 Dan
 Abegg
 Your Output: 
-
+Clark
+Rivest
+Dan
+Abegg
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -55,7 +58,11 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-
+Exception in thread "main" java.lang.NumberFormatException: empty String
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(Unknown Source)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(Unknown Source)
+	at java.base/java.lang.Double.parseDouble(Unknown Source)
+	at Solution.main(Solution.java:35)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -841,5 +848,64 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-
+Ruby Jackson
+Charles B. Macdonald
+Greg Page
+Andrew Macdonald
+Alex James
+Marina Palmer
+David Jacobs
+Jeannette Haien
+Daniel Hahn
+Sara Palacios
+Charles Panati
+Fiona MacKenzie
+Mark Haddon
+Julie Mac
+James Macdonald
+Jane MacDougall
+Tim Page
+Harvey B. Mackay
+Jennifer Page
+Audrey Mackaman
+Burton L. Mack
+Jessie Haas
+Joshilyn Jackson
+Melissa Jacobs
+Michael Hale
+Jeff MacGregor
+Fiona MacDonald
+Katharina Hagena
+Sarah Jacoby
+Anna-Liisa Hakkarainen
+Joie Jager-Hyman
+Alex Palmer
+David Hagedorn
+M MacCallum
+James B. Maas
+Manoj Pandey
+John W. Jacobs
+Thomas Paine
+Richard Mabey
+Jo Jackson King
+Nick Page
+Kinley MacGregor
+Liza Palmer
+Libby Jackson
+Kristin Halbrook
+Auston Habershaw
+Chris Packham
+Nafisa Haji
+Rebecca Paley
+Marilyn Hagerty
+Shaili Jain M.D.
+Al Jaffee
+Nasim Marie Jafry
+Laura Holmes Haddad
+David H. Hackworth
+Shelley Jackson
+Daniel Palmer
+Marianna Palk
+Thelma Page
+Vicky Hales-Dutton
 ----------------------------------------

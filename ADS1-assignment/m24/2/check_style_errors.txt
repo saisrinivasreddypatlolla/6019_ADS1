@@ -20,16 +20,8 @@ Starting audit...
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:21:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:21:33: Parameter args should be final. [FinalParameters]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:22: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:27: Line is longer than 80 characters (found 122). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:27:111: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:33: Line is longer than 80 characters (found 142). [LineLength]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:33:89: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:36: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:47: ';' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:48: '<' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:49: '<' is not followed by whitespace. [WhitespaceAround]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:61: ';' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:34:65: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:27: Line is longer than 80 characters (found 123). [LineLength]
+[ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:33: Line is longer than 80 characters (found 143). [LineLength]
 [ERROR] E:\ADS1\6019_ADS1\ADS1-assignment\m24\2\Solution.java:35: Line is longer than 80 characters (found 107). [LineLength]
 Audit done.
-Checkstyle ends with 32 errors.
+Checkstyle ends with 24 errors.
